@@ -1,15 +1,28 @@
-import os, base64
+import os, base64, json
 from collections import defaultdict
 import streamlit as st
 from streamlit_extras.stylable_container import stylable_container
 from utils import Gacha
 
-# ---------- init ----------
-if "gacha" not in st.session_state:
-    st.session_state.gacha = Gacha()
-if "last_pull" not in st.session_state:
+
+# sidebar
+banner_choice = st.sidebar.selectbox(
+    "Select Banner",
+    ["Themed Banner", "Fate Themed Banner"]
+)
+banner_files = {
+    "Themed Banner" : "standard_themed_banner",
+    "Fate Themed Banner" : "fate_themed_banner",
+}
+with open(f'data/banners/{banner_files[banner_choice]}.json', "r", encoding="utf-8") as f:
+    selected_banner = json.load(f)
+
+
+# initialize
+if "gacha" not in st.session_state or st.session_state.gacha_banner != banner_choice:
+    st.session_state.gacha = Gacha(banner_files[banner_choice])
+    st.session_state.gacha_banner = banner_choice
     st.session_state.last_pull = []
-if "pulling" not in st.session_state:
     st.session_state.pulling = False
 
 gacha = st.session_state.gacha
@@ -129,23 +142,16 @@ div.stButton > button:active {
 """, unsafe_allow_html=True)
 
 # banner
-st.markdown("<h2 style=\"text-align: center\"> Themed Banner</h2>", unsafe_allow_html=True)
-st.markdown("<h3>Upcoming Banner: Through the Tide Home</h3>", unsafe_allow_html=True)
-st.image("data/ui/banner.png")
-st.markdown("<h4>Start Date: 2025/09/18, 09:00 UTC</h4>", unsafe_allow_html=True)
-st.markdown("<h4>Target Unit: Bianca: Crepuscule</h4>", unsafe_allow_html=True)
+st.markdown(f"<h2 style=\"text-align: center\">{selected_banner['title']}</h2>", unsafe_allow_html=True)
+st.markdown(f"<h3>{selected_banner['subtitle']}</h3>", unsafe_allow_html=True)
+st.image(selected_banner['img'])
+st.markdown(f"<h4>Global Start Date: {selected_banner['start_date']}</h4>", unsafe_allow_html=True)
+st.markdown(f"<h4>Target {selected_banner['target']}: {selected_banner['target_name']}</h4>", unsafe_allow_html=True)
 
 # rates
 with st.expander("Show Gacha Rates", expanded=False):
-    st.markdown("""
-    - S-Rank Omniframe: 0.5%
-    - S-Rank Omniframe (including guaranteed): 1.9%
-    - A, B-Rank Omniframe: 13.95%
-    - Construct Shard: 22.11%
-    - 4★ Equipment: 28.39%
-    - EXP Material: 4.81%
-    - Cog Box: 14.42%
-    """)
+    for category in selected_banner['rates']:
+        st.markdown(f"- {category['name']}: {round(category['rate']*100,2)}%")
 
 # pull button
 with st.form("pull_form"):
@@ -191,7 +197,7 @@ else:
     st.write("No pulls yet.")
 
 # pity counter
-st.markdown(f"### Pity Counter: {gacha.pity}/60")
+st.markdown(f"### Pity Counter: {gacha.pity_count}/{selected_banner['pity']}")
 st.divider()
 
 # sort spoils

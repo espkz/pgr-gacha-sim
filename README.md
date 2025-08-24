@@ -2,7 +2,7 @@
 I mostly made this because I saw the Uma Musume one and got jealous lol
 
 ## Current State
-- Themed Banner available (current/upcoming Construct for global servers: Bianca: Crepuscule for Through the Tide Home)
+- Themed Banner and Fate Themed Banner available (current/upcoming Construct for global servers: Bianca: Crepuscule for Through the Tide Home)
 
 ## Sources
 - Huaxu
@@ -14,7 +14,6 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 - Pulling too fast will make it bug out (duh don't do that)
 
 ## TODO
-- Fate banner (tab?)
 - Blue banner
 
 ### Maybe

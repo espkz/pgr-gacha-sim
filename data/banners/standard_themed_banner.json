@@ -1,0 +1,41 @@
+{
+    "title": "Themed Banner",
+    "subtitle": "Upcoming Banner: Through the Tide Home",
+    "img": "data/ui/banner.png",
+    "start_date" : "2025/09/18, 09:00 UTC",
+    "target" : "Unit",
+    "target_name" : "Bianca: Crepuscule",
+    "pity" : 60,
+    "rates": [
+      {
+        "name": "S-Rank Omniframe",
+        "rarity": 6,
+        "rate": 0.005
+      },
+      {
+        "name": "A, B-Rank Omniframe",
+        "rarity": 5,
+        "rate": 0.1395
+      },
+      {
+        "name": "Construct Shard",
+        "rarity": 4,
+        "rate": 0.2211
+      },
+      {
+        "name": "4-star Equipment",
+        "rarity": 4,
+        "rate": 0.2839
+      },
+      {
+        "name": "EXP Material",
+        "rarity": 4,
+        "rate": 0.0481
+      },
+      {
+        "name": "Cog Box",
+        "rarity": 4,
+        "rate": 0.1442
+      }
+    ]
+}
