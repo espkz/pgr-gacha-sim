@@ -1,0 +1,4 @@
+[
+  { "name": "EXP Pod (L)", "rarity": 4 , "img" : "data/category_img/exp_material/exp_pod_l.png"},
+  { "name": "EXP Pod (XL)", "rarity": 4 , "img" : "data/category_img/exp_material/exp_pod_xl.png"}
+]
