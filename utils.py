@@ -19,6 +19,7 @@ class Gacha:
         self.pity = 0
         self.acquire_construct = False
         self.bc = 0
+        self.pulls = 0
         self.spoils = []
 
         self.category_files = {
@@ -40,6 +41,7 @@ class Gacha:
         results = []
         for _ in range(count):
             self.pity += 1
+            self.pulls += 1
             self.bc += 250
             # Hard pity check
             if self.pity >= 60:

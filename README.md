@@ -7,7 +7,7 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 ## Sources
 - Huaxu
   - [Frame images](https://assets.huaxu.app/browse/cn/image/role/?layout=grid)
-  - [PGR Wiki](https://punishing-gray-raven.fandom.com/wiki/Punishing_Gray_Raven)
+  - [Gray Ravens](https://grayravens.com/wiki/GRAY_RAVENS)
 
 ## Current Issues
 - Pulling too fast will make it bug out (duh don't do that)
