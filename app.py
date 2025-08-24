@@ -20,7 +20,7 @@ with open(f'data/banners/{banner_files[banner_choice]}.json', "r", encoding="utf
 
 # initialize
 if "gacha" not in st.session_state or st.session_state.gacha_banner != banner_choice:
-    st.session_state.gacha = Gacha(banner_files[banner_choice])
+    st.session_state.gacha = Gacha(gacha_banner=banner_files[banner_choice])
     st.session_state.gacha_banner = banner_choice
     st.session_state.last_pull = []
     st.session_state.pulling = False
