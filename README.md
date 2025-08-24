@@ -12,10 +12,11 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 ## Current Issues
 - I think the Themed Banner also gives debut unit shards? Unsure though (also I don't have the assets so I have to find a replacement image)
 - Pulling too fast will make it bug out (duh don't do that)
+- Gets a little slow because I think that's Streamlit latency (will look for a different place to host)
 
 ## TODO
-- Blue banner
+- Blue banner (? how the hell is the A-rank pool thing going to work)
 
 ### Maybe
-- Weapon banner (is going to be a pain but well)
-- CUB banner
+- Weapon banner (is going to be a pain hahahahahahahaha)
+- CUB banner (this one is a little less pain but still)
