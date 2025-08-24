@@ -10,6 +10,7 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
   - [Gray Ravens](https://grayravens.com/wiki/GRAY_RAVENS)
 
 ## Current Issues
+- I think the Themed Banner also gives debut unit shards? Unsure though (also I don't have the assets so I have to find a replacement image)
 - Pulling too fast will make it bug out (duh don't do that)
 
 ## TODO
