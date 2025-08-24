@@ -1,6 +1,7 @@
 import os, base64
 from collections import defaultdict
 import streamlit as st
+from streamlit_extras.stylable_container import stylable_container
 from utils import Gacha
 
 # ---------- init ----------
@@ -263,25 +264,25 @@ with cols[0]:
     )
 
     # reset button
-    st.markdown(
-        f"""
-        <button 
-            onclick="window.location.reload();" 
-            style="
-                font-size:1.4rem;
-                padding:10px 20px;
-                border-radius:12px;
-                background-color:#FF5349;
-                color:white;
-                font-weight:700;
-                border:none;
-                cursor:pointer;
-            ">
-            Reset
-        </button>
-        """,
-        unsafe_allow_html=True
-    )
+    with stylable_container(
+            "red",
+            css_styles="""
+            div.stButton > button {
+                background-color: #FF0000 !important;
+                color: white;
+                font-weight: 800;
+                font-size: 1.8rem;
+                border-radius: 15px;
+            }
+            div.stButton > button:hover {
+                background-color: #FF5555 !important;
+            }
+            """
+    ):
+        reset = st.button("Reset")
+
+    if reset:
+        reset_all()
 
 # spoils
 
@@ -294,4 +295,3 @@ with cols[2]:
 with cols[3]:
     mats = collect_pairs([4, 3])
     st.markdown(render_group("4★", mats), unsafe_allow_html=True)
-
