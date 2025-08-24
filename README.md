@@ -7,7 +7,7 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 ## Sources
 - Huaxu
   - [Frame images](https://assets.huaxu.app/browse/cn/image/role/?layout=grid)
-  - [Gray Ravens](https://grayravens.com/wiki/GRAY_RAVENS)
+- [Gray Ravens](https://grayravens.com/wiki/GRAY_RAVENS)
 
 ## Current Issues
 - I think the Themed Banner also gives debut unit shards? Unsure though (also I don't have the assets so I have to find a replacement image)
