@@ -16,7 +16,8 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 
 ## TODO
 - Blue banner (? how the hell is the A-rank pool thing going to work)
+- Update the banner for global
 
 ### Maybe
-- Weapon banner (is going to be a pain hahahahahahahaha)
+- Weapon banner (is going to be a pain because of the individual off-rates but surely—)
 - CUB banner (this one is a little less pain but still)
