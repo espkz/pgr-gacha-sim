@@ -3,6 +3,7 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 
 ## Current State
 - Themed Banner and Fate Themed Banner available (current/upcoming Construct for global servers: Bianca: Crepuscule for Through the Tide Home)
+- Base Member Target with possible S-rank check up to Selena: Pianissimo
 
 ## Sources
 - Huaxu
@@ -15,8 +16,8 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 - Gets a little slow because I think that's Streamlit latency (will look for a different place to host)
 
 ## TODO
-- Blue banner (? how the hell is the A-rank pool thing going to work)
-- Update the banner for global
+- Update patch choices for future (Through the Tide Home, Woven Prologue, Ideal Cage)
+- Veronica update
 
 ### Maybe
 - Weapon banner (is going to be a pain because of the individual off-rates but surely—)

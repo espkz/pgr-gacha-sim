@@ -8,11 +8,12 @@ from utils import Gacha
 # sidebar
 banner_choice = st.sidebar.selectbox(
     "Select Banner",
-    ["Themed Banner", "Fate Themed Banner"]
+    ["Themed Banner", "Fate Themed Banner", "Base Member Target"]
 )
 banner_files = {
     "Themed Banner" : "standard_themed_banner",
     "Fate Themed Banner" : "fate_themed_banner",
+    "Base Member Target" : "member_target_banner"
 }
 with open(f'data/banners/{banner_files[banner_choice]}.json', "r", encoding="utf-8") as f:
     selected_banner = json.load(f)
@@ -42,7 +43,9 @@ def reset_all():
     st.rerun()
 
 # inline base64 for local image (so it always renders)
-BC_IMG_PATH = "data/ui/bc.png"
+
+# standard BC
+CURRENCY_IMG_PATH = "data/ui/bc.png"
 def inline_img(path: str, width: int = 20) -> str:
     if os.path.exists(path):
         with open(path, "rb") as f:
@@ -143,10 +146,29 @@ div.stButton > button:active {
 
 # banner
 st.markdown(f"<h2 style=\"text-align: center\">{selected_banner['title']}</h2>", unsafe_allow_html=True)
-st.markdown(f"<h3>{selected_banner['subtitle']}</h3>", unsafe_allow_html=True)
-st.image(selected_banner['img'])
-st.markdown(f"<h4>Global Start Date: {selected_banner['start_date']}</h4>", unsafe_allow_html=True)
-st.markdown(f"<h4>Target {selected_banner['target']}: {selected_banner['target_name']}</h4>", unsafe_allow_html=True)
+# base banner UI
+if selected_banner["title"] == "Member Target Banner":
+    # currency used is blue ticket
+    CURRENCY_IMG_PATH = "data/ui/blue_ticket.png"
+    with open("data/category_rates/s_rank_omniframe.json", "r", encoding="utf-8") as f:
+        s_rank_units = [u["name"] for u in json.load(f) if "base" in u["banner"]]
+    with open("data/category_rates/a_b_rank_omniframe.json", "r", encoding="utf-8") as f:
+        ab_units = json.load(f)
+        a_rank_units = [u["name"] for u in ab_units if u.get("rank") == "A"]
+
+    st.markdown("### Select Targets")
+
+    selected_s = st.selectbox("S-Rank Target", ["Random"] + s_rank_units)
+    selected_a = st.selectbox("A-Rank Target", ["Random"] + a_rank_units)
+
+    gacha.change_target(6, "" if selected_s == "Random" else selected_s)
+    gacha.change_target(5, "" if selected_a == "Random" else selected_a)
+
+else: # for themed banner
+    st.markdown(f"<h3>{selected_banner['subtitle']}</h3>", unsafe_allow_html=True)
+    st.image(selected_banner['img'])
+    st.markdown(f"<h4>Global Start Date: {selected_banner['start_date']}</h4>", unsafe_allow_html=True)
+    st.markdown(f"<h4>Target {selected_banner['target']}: {selected_banner['target_name']}</h4>", unsafe_allow_html=True)
 
 # rates
 with st.expander("Show Gacha Rates", expanded=False):
@@ -247,11 +269,11 @@ cols = st.columns([1, 1, 1, 1])
 
 with cols[0]:
     # total bc
-    bc_img_html = inline_img(BC_IMG_PATH, width=40)
+    currency_img_html = inline_img(CURRENCY_IMG_PATH, width=40)
     st.markdown(
         f"""
         <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
-            <span style="font-weight:700; font-size:1.8rem;">Total {bc_img_html}</span>
+            <span style="font-weight:700; font-size:1.8rem;">Total {currency_img_html}</span>
             <span style="font-weight:700; font-size:1.8rem;">{gacha.bc:,}</span>
         </div>
         """,

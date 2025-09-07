@@ -82,7 +82,7 @@ class Gacha:
             # for five-star pity (base)
             elif self.has_five_star_pity and self.five_star_pity_count >= 10:
                 item = self._get_five_star()
-                self.a_pity_count = 0
+                self.five_star_pity_count = 0
             else:
                 item = self._get_random_item()
                 # if you won
