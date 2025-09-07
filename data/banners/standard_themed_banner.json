@@ -6,6 +6,7 @@
     "target" : "Unit",
     "target_name" : "Bianca: Crepuscule",
     "pity" : 60,
+    "has_five_star_pity" : 0,
     "rates": [
       {
         "name": "S-Rank Omniframe",
