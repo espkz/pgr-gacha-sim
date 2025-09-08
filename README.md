@@ -17,8 +17,15 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 
 ## TODO
 - Update patch choices for future (Through the Tide Home, Woven Prologue, Ideal Cage)
+  - Data for frames can also be updated to be all in one and picked out with each upcoming/existing patch (differentiate S-rank v. A-rank banners)
 - Veronica update
+- CUB banner (finalize)
+- Apparently base banner is also "A-rank or higher guaranteed in 10 pulls" which is what
 
 ### Maybe
 - Weapon banner (is going to be a pain because of the individual off-rates but surely—)
-- CUB banner (this one is a little less pain but still)
+- Uniframe banner (bruh)
+- Arrival banner
+  - 70% target and other two target selectors (just to make it easier lol)
+  - It probably starts from Scire because Daren is (somehow) not dead yet (maybe just add all S-ranks for the sake of me not figuring that out)
+  - Make sure targeted is not selectable from the other 15%s
