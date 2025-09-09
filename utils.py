@@ -42,7 +42,11 @@ class Gacha:
             "Construct Shard": "data/category_rates/construct_shard.json",
             "4-star Equipment": "data/category_rates/four_star_equipment.json",
             "EXP Material": "data/category_rates/exp_material.json",
-            "Cog Box": "data/category_rates/cog_box.json"
+            "Cog Box": "data/category_rates/cog_box.json",
+
+            "S-Rank CUB" : "data/category_rates/cub.json",
+            "A-Rank CUB" : "data/category_rates/cub.json",
+            "CUB EXP Material" : "data/category_rates/cub_exp_material.json",
         }
 
         self.targeted_units = {
