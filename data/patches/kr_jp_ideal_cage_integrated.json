@@ -1,0 +1,31 @@
+{
+    "patch_name": "Woven Prologue+Ideal Cage",
+    "patch_type" : "S",
+    "a_rank_patch_included" : 1,
+    "img": "data/img/patch_banners/woven_prologue.png",
+    "start_date" : "2025/09/26, 09:00 UTC",
+    "banners": [
+      {
+        "name": "Themed Banner",
+        "unit" : "Veronica: Aegis"
+      },
+      {
+        "name": "Fate Themed Banner",
+        "unit" : "Veronica: Aegis"
+      },
+      {
+        "name": "CUB Target Banner",
+        "unit" : "Scalefort"
+      },
+      {
+        "name": "Member Target Banner",
+        "unit" : "Bianca: Crepuscule",
+        "rank" : "S"
+      },
+      {
+        "name": "Member Target Banner",
+        "unit" : "Discord: Secator",
+        "rank" : "A"
+      }
+    ]
+}
