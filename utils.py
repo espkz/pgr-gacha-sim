@@ -194,7 +194,7 @@ class Gacha:
         # filter by rarity first
         five_star_items = [i for i in items if i.get("rarity") == 5]
         if any("rank" in i for i in five_star_items): # for the frames
-            five_star_items = [i for i in five_star_items if i.get("rank") == "A"]
+            five_star_items = [i for i in five_star_items if (i.get("rank") == "A" and "base" in i["banner"])]
 
         if self.has_five_star_target and random() < 0.8:
             return next(i for i in five_star_items if i["name"] == self.targets[5])
