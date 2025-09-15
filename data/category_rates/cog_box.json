@@ -1,4 +1,4 @@
 [
-  { "name": "Cog Box (XL)", "rarity": 4 , "img" : "data/category_img/cog_box/cog_pack_xl.png"},
-  { "name": "Cog Box (XXL)", "rarity": 4 , "img" : "data/category_img/cog_box/cog_pack_xxl.png"}
+  { "name": "Cog Box (XL)", "rarity": 4 , "img" : "data/img/cog_box/cog_pack_xl.png"},
+  { "name": "Cog Box (XXL)", "rarity": 4 , "img" : "data/img/cog_box/cog_pack_xxl.png"}
 ]

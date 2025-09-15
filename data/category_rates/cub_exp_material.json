@@ -1,4 +1,4 @@
 [
-  { "name": "Integrated CUB EXP (S)", "rarity": 4 , "img" : "data/category_img/exp_material/cub_exp_s.png"},
-  { "name": "Integrated CUB EXP (L)", "rarity": 4 , "img" : "data/category_img/exp_material/cub_exp_l.png"}
+  { "name": "Integrated CUB EXP (S)", "rarity": 4 , "img" : "data/img/exp_material/cub_exp_s.png"},
+  { "name": "Integrated CUB EXP (L)", "rarity": 4 , "img" : "data/img/exp_material/cub_exp_l.png"}
 ]
