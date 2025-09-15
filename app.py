@@ -5,10 +5,34 @@ from streamlit_extras.stylable_container import stylable_container
 from utils import Gacha
 
 
-# sidebar
+# sidebars
+patch_choice = st.sidebar.selectbox(
+    "Current Patch",
+    ["Through the Tide Home", "Woven Prologue", "Through the Tide Home+Woven Prologue"]
+)
+patch_files = {
+    "Through the Tide Home" : "through_the_tide_home",
+    "Woven Prologue" : "woven_prologue",
+    "Through the Tide Home+Woven Prologue" : "glb_through_the_tide_home_integrated",
+}
+
+with open(f'data/patches/{patch_files[patch_choice]}.json', "r", encoding="utf-8") as f:
+    selected_patch = json.load(f)
+
+permanent_banners = ["Base Member Target", "CUB Target"] # add weapon and arrival later
+banner_order = ["Themed Banner", "Fate Themed Banner", "Base Member Target", "CUB Target"] # set order
+banner_options = list(set([b["name"] for b in selected_patch["banners"]]+permanent_banners))
+ordered_banner_options = [b for b in banner_order if b in banner_options]
+
+default_index = 0
+if "gacha_banner" in st.session_state and st.session_state["gacha_banner"] in ordered_banner_options:
+    # preserve previous selection if same patch
+    default_index = ordered_banner_options.index(st.session_state.gacha_banner)
+
 banner_choice = st.sidebar.selectbox(
-    "Select Banner",
-    ["Themed Banner", "Fate Themed Banner", "Base Member Target", "CUB Target"]
+    "Banner",
+    ordered_banner_options,
+    index=default_index
 )
 banner_files = {
     "Themed Banner" : "standard_themed_banner",
@@ -16,13 +40,15 @@ banner_files = {
     "Base Member Target" : "member_target_banner",
     "CUB Target" : "cub_target_banner"
 }
+
 with open(f'data/banners/{banner_files[banner_choice]}.json', "r", encoding="utf-8") as f:
     selected_banner = json.load(f)
 
 
 # initialize
 if "gacha" not in st.session_state or st.session_state.gacha_banner != banner_choice:
-    st.session_state.gacha = Gacha(gacha_banner=banner_files[banner_choice])
+    st.session_state.gacha = Gacha(patch=patch_files[patch_choice], gacha_banner=banner_files[banner_choice])
+    st.session_state.gacha_patch = patch_choice
     st.session_state.gacha_banner = banner_choice
     st.session_state.last_pull = []
     st.session_state.pulling = False
@@ -38,10 +64,13 @@ def do_pull(count):
 
 # reset function
 def reset_all():
-    for key in ["gacha", "last_pull", "pulling"]:
-        if key in st.session_state:
-            del st.session_state[key]
-    st.rerun()
+    gacha = st.session_state.gacha
+    gacha.pulls = 0
+    gacha.pity_count = 0
+    gacha.five_star_pity_count = 0
+    gacha.bc = 0
+    gacha.spoils = []
+    st.session_state.last_pull = []
 
 # inline base64 for local image (so it always renders)
 
@@ -145,6 +174,20 @@ div.stButton > button:active {
 </style>
 """, unsafe_allow_html=True)
 
+# patch header
+
+st.markdown(f"<h1 style='text-align:center;'>{selected_patch['patch_name']}</h1>", unsafe_allow_html=True)
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    st.image(selected_patch['img'], width=2000)
+st.markdown(f"""
+<div style="text-align:center;">
+    <h4>Start Date: {selected_patch['start_date']}</h4>
+</div>
+""", unsafe_allow_html=True)
+
+
+
 # banner
 st.markdown(f"<h2 style=\"text-align: center\">{selected_banner['title']}</h2>", unsafe_allow_html=True)
 # base banner UI
@@ -155,11 +198,8 @@ if selected_banner["title"] == "Member Target Banner":
     gacha.change_target_type("unit")
 
     # make target list
-    with open("data/category_rates/s_rank_omniframe.json", "r", encoding="utf-8") as f:
-        s_rank_units = [u["name"] for u in json.load(f) if "base" in u["banner"]]
-    with open("data/category_rates/a_b_rank_omniframe.json", "r", encoding="utf-8") as f:
-        ab_units = json.load(f)
-        a_rank_units = [u["name"] for u in ab_units if u.get("rank") == "A"]
+    s_rank_units = [u["name"] for u in gacha.s_ranks if "base" in u["banner"]]
+    a_rank_units = [u["name"] for u in gacha.a_ranks if u.get("rank") == "A" and ("base" in u["banner"] or "debut" in u["banner"])]
 
     st.markdown("### Select Targets")
 
@@ -189,10 +229,6 @@ elif selected_banner["title"] == "CUB Target Banner":
 
 else: # for themed banner
     gacha.change_target_type("")
-    st.markdown(f"<h3>{selected_banner['subtitle']}</h3>", unsafe_allow_html=True)
-    st.image(selected_banner['img'])
-    st.markdown(f"<h4>Global Start Date: {selected_banner['start_date']}</h4>", unsafe_allow_html=True)
-    st.markdown(f"<h4>Target {selected_banner['target']}: {selected_banner['target_name']}</h4>", unsafe_allow_html=True)
 
 # rates
 with st.expander("Show Gacha Rates", expanded=False):

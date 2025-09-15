@@ -1,8 +1,5 @@
 {
     "title": "CUB Target Banner",
-    "subtitle": "Upcoming Banner: Through the Tide Home",
-    "img": "data/ui/banner.png",
-    "start_date" : "2025/09/18, 09:00 UTC",
     "target" : "CUB",
     "target_name" : "",
     "pity" : 20,

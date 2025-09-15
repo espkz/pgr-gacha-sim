@@ -1,7 +1,7 @@
 from random import choices, choice, random
 import json
 
-def load_category(file_path):
+def load_json(file_path):
     with open(file_path, "r") as f:
         return json.load(f)
 
@@ -17,9 +17,8 @@ def check_five_star_pity(file_path):
         data = json.load(f)
     return data["has_five_star_pity"]
 
-
 class Gacha:
-    def __init__(self, gacha_banner='standard_themed_banner'):
+    def __init__(self, gacha_banner='standard_themed_banner', patch = 'glb_through_the_tide_home_integrated'):
         self.pity_count = 0
         self.five_star_pity_count = 0  # five-star pity is 10 for all base banners
         self.acquire_construct = False
@@ -30,6 +29,16 @@ class Gacha:
         self.gacha_banner = gacha_banner
         self.gacha_banner_json = f'data/banners/{gacha_banner}.json'
 
+        self.patch = patch
+        self.patch_json = f'data/patches/{patch}.json'
+
+        # load frames and cubs for updating
+        self.s_ranks = load_json("data/category_rates/s_rank_omniframe.json")
+        self.a_ranks = load_json("data/category_rates/a_b_rank_omniframe.json")
+        self.s_cubs = [i for i in load_json("data/category_rates/cub.json") if i.get("rarity") == 6]
+        self.a_cubs = [i for i in load_json("data/category_rates/cub.json") if i.get("rarity") == 5]
+
+        # update banner type and patch if applicable
         self.category_rates, self.pity = load_banner(self.gacha_banner_json)
         self.has_five_star_pity = True if check_five_star_pity(self.gacha_banner_json) else False
         self.has_five_star_target = False
@@ -37,15 +46,15 @@ class Gacha:
 
 
         self.category_files = {
-            "S-Rank Omniframe": "data/category_rates/s_rank_omniframe.json",
-            "A, B-Rank Omniframe": "data/category_rates/a_b_rank_omniframe.json",
+            "S-Rank Omniframe": self.s_ranks,
+            "A, B-Rank Omniframe": self.a_ranks,
             "Construct Shard": "data/category_rates/construct_shard.json",
             "4-star Equipment": "data/category_rates/four_star_equipment.json",
             "EXP Material": "data/category_rates/exp_material.json",
             "Cog Box": "data/category_rates/cog_box.json",
 
-            "S-Rank CUB" : "data/category_rates/cub.json",
-            "A-Rank CUB" : "data/category_rates/cub.json",
+            "S-Rank CUB" : self.s_cubs,
+            "A-Rank CUB" : self.a_cubs,
             "CUB EXP Material" : "data/category_rates/cub_exp_material.json",
             "CUB Overclock Material" : "data/category_rates/cub_overclock_material.json",
             "Support Skill Component": "data/category_rates/support_skill_component.json",
@@ -57,6 +66,49 @@ class Gacha:
             5 : "",
             6 : ""
         }
+
+        self.update_patch()
+
+    def update_patch(self):
+        patch_info = load_json(self.patch_json)
+        # reset
+        self.s_ranks = load_json("data/category_rates/s_rank_omniframe.json")
+        self.a_ranks = load_json("data/category_rates/a_b_rank_omniframe.json")
+        self.s_cubs = [i for i in load_json("data/category_rates/cub.json") if i.get("rarity") == 6]
+
+        # apply patch
+        s_construct_map = {c["name"]: c for c in self.s_ranks}
+        a_construct_map = {c["name"]: c for c in self.a_ranks}
+        s_cub_map = {c["name"]: c for c in self.s_cubs}
+        for banner in patch_info["banners"]:
+            unit_name = banner["unit"]
+            if banner["name"] in ["Themed Banner", "Fate Themed Banner"]:
+                unit = s_construct_map.get(unit_name)
+                unit["banner"] = ["debut"]
+            elif banner["name"] == "Base Member Target":
+                a_patch_included = patch_info.get("a_rank_patch_included", 0)
+                # A-rank patch debut/if integrated patch
+                if (patch_info["patch_type"] == "A" and banner["rank"] == "A") or (patch_info["patch_type"] == "S" and a_patch_included and banner["rank"] == "A"):
+                    unit = a_construct_map.get(unit_name)
+                    unit["banner"] = ["debut"]
+                # other (S-rank/A-rank added to banner)
+                else:
+                    unit = s_construct_map.get(unit_name) if banner["rank"] == "S" else a_construct_map.get(unit_name)
+                    unit["banner"] = ["base"]
+            elif "CUB Target" in banner["name"]:
+                unit = s_cub_map.get(unit_name)
+                # if debut patch with S-rank, 100%
+                if patch_info["patch_type"] == "S":
+                    unit["banner"] = ["debut"]
+                else:
+                    unit["banner"] = ["base"]
+        # update
+        self.category_files["A, B-Rank Omniframe"].clear()
+        self.category_files["A, B-Rank Omniframe"].extend(self.a_ranks)
+        self.category_files["S-Rank Omniframe"].clear()
+        self.category_files["S-Rank Omniframe"].extend(self.s_ranks)
+        self.category_files["S-Rank CUB"].clear()
+        self.category_files["S-Rank CUB"].extend(self.s_cubs)
 
     # update target
     def change_target(self, rarity = 5, name = ""):
@@ -127,7 +179,7 @@ class Gacha:
         elif chosen_category_rarity == 6:
             return self._get_six_star(self.targets["type"])
 
-        items = load_category(self.category_files[chosen_category_name])
+        items = load_json(self.category_files[chosen_category_name])
         return choice(items)
 
     def _get_five_star_or_higher(self):
@@ -158,7 +210,7 @@ class Gacha:
         }
         key = types[type]
 
-        items = load_category(self.category_files[key])
+        items = self.category_files[key]
         # if it's the base banner and there's a check target
         if self.targets["type"] == 'unit':
             s_ranks = [i for i in items if "base" in i["banner"]]
@@ -168,10 +220,16 @@ class Gacha:
             return choice(non_target_s_ranks)
         # if it's the cub banner and there's a target
         if self.targets["type"] == 'cub':
-            s_ranks = [i for i in items if i["rarity"] == 6]
-            if self.has_six_star_target and random() < 0.8:
-                return next(i for i in s_ranks if i["name"] == self.targets[6])
-            non_target_s_ranks = [i for i in s_ranks if i["name"] != self.targets[6]]
+            if self.has_six_star_target:
+                target_item = next((i for i in items if i["name"] == self.targets[6]), None)
+                if target_item:
+                    # if debut CUB, 100%
+                    if "debut" in target_item["banner"]:
+                        return target_item
+                    # otherwise, 80%
+                    if random() < 0.8:
+                        return target_item
+            non_target_s_ranks = [i for i in items if i["name"] != self.targets[6]]
             return choice(non_target_s_ranks)
         # if it's the debut banner
         s_ranks = [i for i in items if "debut" in i["banner"]]
@@ -190,13 +248,20 @@ class Gacha:
         }
         key = types[type]
 
-        items = load_category(self.category_files[key])
+        items = self.category_files[key]
         # filter by rarity first
         five_star_items = [i for i in items if i.get("rarity") == 5]
         if any("rank" in i for i in five_star_items): # for the frames
-            five_star_items = [i for i in five_star_items if (i.get("rank") == "A" and "base" in i["banner"])]
-
-        if self.has_five_star_target and random() < 0.8:
-            return next(i for i in five_star_items if i["name"] == self.targets[5])
+            five_star_items = [i for i in five_star_items if (i.get("rank") == "A" and ("base" in i["banner"]) or "debut" in i["banner"])]
+        if self.has_five_star_target:
+            target_item = next((i for i in five_star_items if i["name"] == self.targets[5]), None)
+            if target_item:
+                # if debut A-rank, 100%
+                if "debut" in target_item["banner"]:
+                    return target_item
+                # otherwise, 80%
+                if random() < 0.8:
+                    return target_item
+        # pick random A-rank/non-targeted
         non_target_a_ranks = [i for i in five_star_items if i["name"] != self.targets[5]]
         return choice(non_target_a_ranks)

@@ -25,6 +25,5 @@
   { "name": "Bridget: Ardeo", "rarity": 5, "rank" : "A", "banner" :  ["base"], "img" :  "data/img/a_b_rank_omniframe/ardeo.png" },
   { "name": "Yata: Fulgor", "rarity": 5, "rank" : "A", "banner" :  ["base"], "img" :  "data/img/a_b_rank_omniframe/fulgor.png" },
   { "name": "Jetavie: Daybreak", "rarity": 5, "rank" : "A", "banner" :  ["base"], "img" :  "data/img/a_b_rank_omniframe/daybreak.png" },
-
   { "name": "Discord: Secator", "rarity": 5,  "rank" : "A", "banner" : [], "img" :  "data/img/a_b_rank_omniframe/secator.png" }
 ]

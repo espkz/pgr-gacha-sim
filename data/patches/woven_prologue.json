@@ -5,9 +5,13 @@
     "start_date" : "2025/09/19, 09:00 UTC",
     "banners": [
       {
-        "name": "Member Target Banner",
+        "name": "Base Member Target",
         "unit" : "Discord: Secator",
         "rank" : "A"
+      },
+      {
+        "name": "CUB Target",
+        "unit" : "Noctiluca"
       }
     ]
 }

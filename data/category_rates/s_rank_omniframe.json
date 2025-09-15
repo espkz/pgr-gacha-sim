@@ -1,7 +1,4 @@
 [
-  { "name": "Bianca: Crepuscule", "rarity": 6 , "banner" :  ["debut"], "img" : "data/img/s_rank_omniframe/crepuscule.png"},
-
-
   { "name": "Liv: Luminance", "rarity": 6 , "banner" :  ["base"], "img" : "data/img/s_rank_omniframe/luminance.png"},
   { "name": "Lee: Entropy", "rarity": 6 , "banner" :  ["base"], "img" : "data/img/s_rank_omniframe/entropy.png"},
   { "name": "Karenina: Ember", "rarity": 6 , "banner" :  ["base"], "img" : "data/img/s_rank_omniframe/ember.png"},
@@ -35,8 +32,7 @@
   { "name": "Ishmael: Parhelion", "rarity": 6 , "banner" :  ["base"], "img" : "data/img/s_rank_omniframe/parhelion.png"},
   { "name": "Lilith: Daemonissa", "rarity": 6 , "banner" :  ["base"], "img" : "data/img/s_rank_omniframe/daemonissa.png"},
   { "name": "Selena: Pianissimo", "rarity": 6 , "banner" :  ["base"], "img" : "data/img/s_rank_omniframe/pianissimo.png"},
-
-
-  { "name": "Vera: Geiravor", "rarity": 6 , "banner" :  [""], "img" : "data/img/s_rank_omniframe/geiravor.png"},
+  { "name": "Vera: Geiravor", "rarity": 6 , "banner" :  ["base"], "img" : "data/img/s_rank_omniframe/geiravor.png"},
+  { "name": "Bianca: Crepuscule", "rarity": 6 , "banner" :  [""], "img" : "data/img/s_rank_omniframe/crepuscule.png"},
   { "name": "Veronica: Aegis", "rarity": 6 , "banner" :  [""], "img" : "data/img/s_rank_omniframe/aegis.png"}
 ]
