@@ -1,0 +1,30 @@
+{
+    "patch_name": "Ideal Cage",
+    "patch_type" : "S",
+    "img": "data/img/patch_banners/ideal_cage.png",
+    "start_date" : "2025/11/13 09:00 UTC",
+    "banners": [
+      {
+        "name": "Themed Banner",
+        "unit" : "Veronica: Aegis"
+      },
+      {
+        "name": "Fate Themed Banner",
+        "unit" : "Veronica: Aegis"
+      },
+      {
+        "name": "CUB Target Banner",
+        "unit" : "Scalefort"
+      },
+      {
+        "name": "Member Target Banner",
+        "unit" : "Bianca: Crepuscule",
+        "rank" : "S"
+      },
+      {
+        "name": "Member Target Banner",
+        "unit" : "Discord: Secator",
+        "rank" : "A"
+      }
+    ]
+}

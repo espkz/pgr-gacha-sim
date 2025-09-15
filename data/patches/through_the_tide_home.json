@@ -1,0 +1,25 @@
+{
+    "patch_name": "Through the Tide Home",
+    "patch_type" : "S",
+    "img": "data/img/patch_banners/through_the_tide_home.png",
+    "start_date" : "2025/09/19, 09:00 UTC",
+    "banners": [
+      {
+        "name": "Themed Banner",
+        "unit" : "Bianca: Crepuscule"
+      },
+      {
+        "name": "Fate Themed Banner",
+        "unit" : "Bianca: Crepuscule"
+      },
+      {
+        "name": "CUB Target Banner",
+        "unit" : "Noctiluca"
+      },
+      {
+        "name": "Member Target Banner",
+        "unit" : "Vera: Geiravor",
+        "rank" : "S"
+      }
+    ]
+}

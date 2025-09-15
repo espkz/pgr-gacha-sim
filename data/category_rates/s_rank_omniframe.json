@@ -38,5 +38,5 @@
 
 
   { "name": "Vera: Geiravor", "rarity": 6 , "banner" :  [""], "img" : "data/category_img/s_rank_omniframe/geiravor.png"},
-  { "name": "Veronica: Ironbone", "rarity": 6 , "banner" :  [""], "img" : "data/category_img/s_rank_omniframe/ironbone.png"}
+  { "name": "Veronica: Aegis", "rarity": 6 , "banner" :  [""], "img" : "data/category_img/s_rank_omniframe/aegis.png"}
 ]

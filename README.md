@@ -4,6 +4,7 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 ## Current State
 - Themed Banner and Fate Themed Banner available (current/upcoming Construct for global servers: Bianca: Crepuscule for Through the Tide Home)
 - Base Member Target with possible S-rank check up to Selena: Pianissimo
+- CUB Banner (no debut target, only 80% rates)
 
 ## Sources
 - Huaxu
@@ -11,7 +12,7 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 - [Gray Ravens](https://grayravens.com/wiki/GRAY_RAVENS)
 
 ## Current Issues
-- I think the Themed Banner also gives debut unit shards? Unsure though (also I don't have the assets so I have to find a replacement image)
+- I think the Themed/CUB on debut also gives debut unit/CUB shards? Unsure though (also I don't have the assets so I have to find a replacement image)
 - Pulling too fast will make it bug out (duh don't do that)
 - Gets a little slow because I think that's Streamlit latency (will look for a different place to host)
 
@@ -19,7 +20,6 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 - Update patch choices for future (Through the Tide Home, Woven Prologue, Ideal Cage)
   - Data for frames can also be updated to be all in one and picked out with each upcoming/existing patch (differentiate S-rank v. A-rank banners)
 - Veronica update
-- CUB banner (finalize)
 
 ### Maybe
 - Weapon banner (is going to be a pain because of the individual off-rates but surely—)

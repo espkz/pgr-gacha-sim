@@ -1,2 +1,7 @@
-{ "name": "Discord: Secator", "rarity": 4, "img" :  "data/category_img/a_b_rank_omniframe/secator.png" }
-{ "name": "Booster Structural Part - Noctiluca", "rarity": 4, "img" :  "data/category_img/cub/noctiluca.png" }
+{ "name": "Inver-Shard - Crepuscule", "rarity": 4, "img" :  "data/category_img/construct_shard/shard_crepuscule.png" }
+{ "name": "Booster Structural Part - Noctiluca", "rarity": 4, "img" :  "data/category_img/cub/shard_noctiluca.png" }
+
+{ "name": "Inver-Shard - Secator", "rarity": 4, "img" :  "data/category_img/construct_shard/shard_secator.png" }
+
+{ "name": "Inver-Shard - Aegis", "rarity": 4, "img" :  "data/category_img/construct_shard/shard_aegis.png" }
+{ "name": "Booster Structural Part - Scalefort", "rarity"": 4, "img" :  "data/category_img/cub/shard_scalefort.png" }
