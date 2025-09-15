@@ -1,7 +1,7 @@
 [
   { "name": "Yuan Ye", "rarity": 5, "img" :  "data/category_img/cub/yuan_ye.png" },
   { "name": "Noctua", "rarity": 5, "img" :  "data/category_img/cub/noctua.png" },
-  { "name": "Seeshel", "rarity": 5, "img" :  "data/category_img/cub/seeshell.png" },
+  { "name": "Seeshell", "rarity": 5, "img" :  "data/category_img/cub/seeshell.png" },
   { "name": "Lingya", "rarity": 5, "img" :  "data/category_img/cub/lingya.png" },
   { "name": "Thorny", "rarity": 5, "img" :  "data/category_img/cub/thorny.png" },
 

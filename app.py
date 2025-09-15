@@ -8,12 +8,13 @@ from utils import Gacha
 # sidebar
 banner_choice = st.sidebar.selectbox(
     "Select Banner",
-    ["Themed Banner", "Fate Themed Banner", "Base Member Target"]
+    ["Themed Banner", "Fate Themed Banner", "Base Member Target", "CUB Target"]
 )
 banner_files = {
     "Themed Banner" : "standard_themed_banner",
     "Fate Themed Banner" : "fate_themed_banner",
-    "Base Member Target" : "member_target_banner"
+    "Base Member Target" : "member_target_banner",
+    "CUB Target" : "cub_target_banner"
 }
 with open(f'data/banners/{banner_files[banner_choice]}.json', "r", encoding="utf-8") as f:
     selected_banner = json.load(f)
@@ -150,6 +151,10 @@ st.markdown(f"<h2 style=\"text-align: center\">{selected_banner['title']}</h2>",
 if selected_banner["title"] == "Member Target Banner":
     # currency used is blue ticket
     CURRENCY_IMG_PATH = "data/ui/blue_ticket.png"
+    # set target type to unit
+    gacha.change_target_type("unit")
+
+    # make target list
     with open("data/category_rates/s_rank_omniframe.json", "r", encoding="utf-8") as f:
         s_rank_units = [u["name"] for u in json.load(f) if "base" in u["banner"]]
     with open("data/category_rates/a_b_rank_omniframe.json", "r", encoding="utf-8") as f:
@@ -164,7 +169,26 @@ if selected_banner["title"] == "Member Target Banner":
     gacha.change_target(6, "" if selected_s == "Random" else selected_s)
     gacha.change_target(5, "" if selected_a == "Random" else selected_a)
 
+# CUB banner UI
+elif selected_banner["title"] == "CUB Target Banner":
+    # currency used is blue ticket
+    CURRENCY_IMG_PATH = "data/ui/cub_ticket.png"
+    # set target type to unit
+    gacha.change_target_type("cub")
+
+    # make target list
+    with open("data/category_rates/cub.json", "r", encoding="utf-8") as f:
+        cubs = json.load(f)
+        s_rank_cubs = [u["name"] for u in cubs if u["rarity"] == 6]
+
+    st.markdown("### Select Targets")
+
+    selected_s = st.selectbox("S-Rank Target", s_rank_cubs)
+
+    gacha.change_target(6, selected_s)
+
 else: # for themed banner
+    gacha.change_target_type("")
     st.markdown(f"<h3>{selected_banner['subtitle']}</h3>", unsafe_allow_html=True)
     st.image(selected_banner['img'])
     st.markdown(f"<h4>Global Start Date: {selected_banner['start_date']}</h4>", unsafe_allow_html=True)

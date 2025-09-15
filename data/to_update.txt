@@ -1,1 +1,2 @@
 { "name": "Discord: Secator", "rarity": 4, "img" :  "data/category_img/a_b_rank_omniframe/secator.png" }
+{ "name": "Booster Structural Part - Noctiluca", "rarity": 4, "img" :  "data/category_img/cub/noctiluca.png" }
