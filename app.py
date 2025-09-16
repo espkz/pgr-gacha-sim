@@ -8,12 +8,13 @@ from utils import Gacha
 # sidebars
 patch_choice = st.sidebar.selectbox(
     "Patch",
-    ["Through the Tide Home", "Woven Prologue", "Through the Tide Home+Woven Prologue"]
+    ["Through the Tide Home", "Woven Prologue", "Through the Tide Home+Woven Prologue", "Ideal Cage"]
 )
 patch_files = {
     "Through the Tide Home" : "through_the_tide_home",
     "Woven Prologue" : "woven_prologue",
     "Through the Tide Home+Woven Prologue" : "glb_through_the_tide_home_integrated",
+    "Ideal Cage" : "ideal_cage"
 }
 
 with open(f'data/patches/{patch_files[patch_choice]}.json', "r", encoding="utf-8") as f:
@@ -181,7 +182,7 @@ with col2:
     st.image(selected_patch['img'], width=2000)
 st.markdown(f"""
 <div style="text-align:center;">
-    <h4>Start Date: {selected_patch['start_date']}</h4>
+    <h4>Global Start Date: {selected_patch['start_date']}</h4>
 </div>
 """, unsafe_allow_html=True)
 

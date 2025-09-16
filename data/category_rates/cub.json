@@ -29,6 +29,7 @@
   { "name": "Billie", "unit": "Daemonissa", "rarity": 6, "banner" : ["base"], "img" : "data/img/cub/billie.png" },
   { "name": "Snow Waltz", "unit": "Pianissimo", "rarity": 6, "banner" : ["base"], "img" : "data/img/cub/snow_waltz.png" },
   { "name": "Wrathfang", "unit": "Geiravor", "rarity": 6, "banner" : ["base"], "img" : "data/img/cub/wrathfang.png" },
-  { "name": "Noctiluca", "unit": "Crepuscule", "rarity": 6, "banner" : [""], "img" : "data/img/cub/noctiluca.png" }
+  { "name": "Noctiluca", "unit": "Crepuscule", "rarity": 6, "banner" : [""], "img" : "data/img/cub/noctiluca.png" },
+  { "name": "Scalefort", "unit": "Aegis", "rarity": 6, "banner" : [""], "img" : "data/img/cub/scalefort.png" }
 
 ]
