@@ -67,9 +67,11 @@ class Gacha:
             6 : ""
         }
 
-        self.update_patch()
+    def update_patch(self, patch):
+        # new patch information
+        self.patch = patch
+        self.patch_json = f'data/patches/{patch}.json'
 
-    def update_patch(self):
         patch_info = load_json(self.patch_json)
         # reset
         self.s_ranks = load_json("data/category_rates/s_rank_omniframe.json")

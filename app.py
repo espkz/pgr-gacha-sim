@@ -54,6 +54,8 @@ if "gacha" not in st.session_state or st.session_state.gacha_banner != banner_ch
     st.session_state.pulling = False
 
 gacha = st.session_state.gacha
+# if the patch hasn't been updated at this point, update
+gacha.update_patch(patch_files[patch_choice])
 
 # complete pulls in one session
 def do_pull(count):
@@ -73,9 +75,7 @@ def reset_all():
     st.session_state.last_pull = []
 
 # inline base64 for local image (so it always renders)
-
-# standard BC
-CURRENCY_IMG_PATH = "data/ui/bc.png"
+CURRENCY_IMG_PATH = "data/ui/bc.png" # standard BC
 def inline_img(path: str, width: int = 20) -> str:
     if os.path.exists(path):
         with open(path, "rb") as f:
@@ -175,7 +175,6 @@ div.stButton > button:active {
 """, unsafe_allow_html=True)
 
 # patch header
-
 st.markdown(f"<h1 style='text-align:center;'>{selected_patch['patch_name']}</h1>", unsafe_allow_html=True)
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
@@ -186,10 +185,9 @@ st.markdown(f"""
 </div>
 """, unsafe_allow_html=True)
 
-
-
 # banner
 st.markdown(f"<h2 style=\"text-align: center\">{selected_banner['title']}</h2>", unsafe_allow_html=True)
+
 # base banner UI
 if selected_banner["title"] == "Member Target Banner":
     # currency used is blue ticket
@@ -219,13 +217,14 @@ elif selected_banner["title"] == "CUB Target Banner":
     # make target list
     with open("data/category_rates/cub.json", "r", encoding="utf-8") as f:
         cubs = json.load(f)
-        s_rank_cubs = [u["name"] for u in cubs if u["rarity"] == 6]
+        s_rank_cubs = [f'{u["name"]} ({u["unit"]})' for u in cubs if u["rarity"] == 6]
 
     st.markdown("### Select Targets")
 
     selected_s = st.selectbox("S-Rank Target", s_rank_cubs)
+    selected_name = selected_s.split(" (")[0]
 
-    gacha.change_target(6, selected_s)
+    gacha.change_target(6, selected_name)
 
 else: # for themed banner
     gacha.change_target_type("")

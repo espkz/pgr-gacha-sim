@@ -2,9 +2,13 @@
 I mostly made this because I saw the Uma Musume one and got jealous lol
 
 ## Current State
-- Themed Banner and Fate Themed Banner available (current/upcoming Construct for global servers: Bianca: Crepuscule for Through the Tide Home)
-- Base Member Target with possible S-rank check up to Selena: Pianissimo
-- CUB Banner (no debut target, only 80% rates)
+- Organizable by patches
+  - Through the Tide Home - Bianca: Crepuscule
+  - Woven Prologue - Discord: Secator
+  - GLB Through the Tide Home integrated - Bianca: Crepuscule and Discord: Secator
+- Themed Banner and Fate Themed Banner available
+- Base Member Target with possible S-rank check
+- CUB banner
 
 ## Sources
 - Huaxu
@@ -15,11 +19,11 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 - I think the Themed/CUB on debut also gives debut unit/CUB shards? Unsure though (also I don't have the assets so I have to find a replacement image)
 - Pulling too fast will make it bug out (duh don't do that)
 - Gets a little slow because I think that's Streamlit latency (will look for a different place to host)
+- The A-rank check resets in Member Target if you swap patches (probably doesn't really matter but still)
 
 ## TODO
-- Update patch choices for future (Through the Tide Home, Woven Prologue, Ideal Cage)
-  - Data for frames can also be updated to be all in one and picked out with each upcoming/existing patch (differentiate S-rank v. A-rank banners)
-- Veronica update
+- Update patch choices for future (Ideal Cage, Woven Prologue+Ideal Cage IP for KR/JP)
+- Veronica update (I'm missing assets help)
 
 ### Maybe
 - Weapon banner (is going to be a pain because of the individual off-rates but surely—)
