@@ -7,7 +7,7 @@ from utils import Gacha
 
 # sidebars
 patch_choice = st.sidebar.selectbox(
-    "Current Patch",
+    "Patch",
     ["Through the Tide Home", "Woven Prologue", "Through the Tide Home+Woven Prologue"]
 )
 patch_files = {
