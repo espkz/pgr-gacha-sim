@@ -26,6 +26,7 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 ## TODO
 - Update patch choices for future (Woven Prologue+Ideal Cage IP for KR/JP, Liv patch)
 - Veronica update (I'm missing assets help)
+- Uniframes (unfinished)
 
 ### Maybe
 - Weapon banner (is going to be a pain because of the individual off-rates but surely—)

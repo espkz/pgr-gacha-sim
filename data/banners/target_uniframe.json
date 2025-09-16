@@ -1,0 +1,33 @@
+{
+    "title": "Target Uniframe Banner",
+    "target" : "uniframe",
+    "pity" : 10,
+    "has_five_star_pity" : 0,
+    "rates": [
+      {
+        "name": "S-Rank Uniframe",
+        "rarity": 6,
+        "rate": 0.05
+      },
+      {
+        "name": "Overclock Material",
+        "rarity": 4,
+        "rate": 0.2845
+      },
+      {
+        "name": "4-star Equipment",
+        "rarity": 4,
+        "rate": 0.2821
+      },
+      {
+        "name": "EXP Material",
+        "rarity": 4,
+        "rate": 0.0644
+      },
+      {
+        "name": "Cog Box",
+        "rarity": 4,
+        "rate": 0.2845
+      }
+    ]
+}
