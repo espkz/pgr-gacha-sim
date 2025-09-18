@@ -2,7 +2,7 @@
     "patch_name": "Woven Prologue+Ideal Cage",
     "patch_type" : "S",
     "a_rank_patch_included" : 1,
-    "img": "data/img/patch_banners/woven_prologue.png",
+    "img": "data/img/patch_banners/ideal_cage.png",
     "start_date" : "2025/09/26, 09:00 UTC",
     "banners": [
       {
@@ -15,15 +15,14 @@
       },
       {
         "name": "CUB Target Banner",
-        "unit" : "Scalefort"
+        "unit" : "Scaled Rampart"
       },
       {
-        "name": "Member Target Banner",
-        "unit" : "Bianca: Crepuscule",
-        "rank" : "S"
+        "name": "CUB Target Banner",
+        "unit" : "Noctiluca"
       },
       {
-        "name": "Member Target Banner",
+        "name": "Base Member Target",
         "unit" : "Discord: Secator",
         "rank" : "A"
       }

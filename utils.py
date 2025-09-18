@@ -100,10 +100,12 @@ class Gacha:
             elif "CUB Target" in banner["name"]:
                 unit = s_cub_map.get(unit_name)
                 # if debut patch with S-rank, 100%
-                if patch_info["patch_type"] == "S":
+                signature_unit = next(i for i in self.s_ranks if unit["unit"] in i["name"])
+                if "debut" in signature_unit["banner"]:
                     unit["banner"] = ["debut"]
                 else:
                     unit["banner"] = ["base"]
+        print(self.a_ranks)
         # update
         self.category_files["A, B-Rank Omniframe"].clear()
         self.category_files["A, B-Rank Omniframe"].extend(self.a_ranks)
@@ -111,7 +113,6 @@ class Gacha:
         self.category_files["S-Rank Omniframe"].extend(self.s_ranks)
         self.category_files["S-Rank CUB"].clear()
         self.category_files["S-Rank CUB"].extend(self.s_cubs)
-
     # update target
     def change_target(self, rarity = 5, name = ""):
         self.targets[rarity] = name
@@ -208,6 +209,7 @@ class Gacha:
         types = {
             "": "S-Rank Omniframe",
             "unit": "S-Rank Omniframe",
+            "debut" : "S-Rank Omniframe",
             "cub": "S-Rank CUB",
         }
         key = types[type]
@@ -233,8 +235,8 @@ class Gacha:
                         return target_item
             non_target_s_ranks = [i for i in items if i["name"] != self.targets[6]]
             return choice(non_target_s_ranks)
-        # if it's the debut banner
-        s_ranks = [i for i in items if "debut" in i["banner"]]
+        # if it's the debut banner - targets["type"] == "debut"
+        s_ranks = [i for i in items if i["name"] == self.targets[6]]
         return choice(s_ranks)
 
     def _get_five_star(self, type="unit"):
@@ -245,6 +247,7 @@ class Gacha:
         """
         types = {
             "" : "A, B-Rank Omniframe",
+            "debut": "A, B-Rank Omniframe", # because even with a debut S-rank A-rank should stay the same
             "unit" : "A, B-Rank Omniframe",
             "cub": "A-Rank CUB",
         }

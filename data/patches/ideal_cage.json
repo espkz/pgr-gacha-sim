@@ -13,16 +13,20 @@
         "unit" : "Veronica: Aegis"
       },
       {
-        "name": "CUB Target Banner",
+        "name": "CUB Target",
         "unit" : "Scaled Rampart"
       },
       {
-        "name": "Member Target Banner",
+        "name": "CUB Target",
+        "unit" : "Noctiluca"
+      },
+      {
+        "name": "Base Member Target",
         "unit" : "Bianca: Crepuscule",
         "rank" : "S"
       },
       {
-        "name": "Member Target Banner",
+        "name": "Base Member Target",
         "unit" : "Discord: Secator",
         "rank" : "A"
       }

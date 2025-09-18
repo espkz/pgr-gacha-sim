@@ -8,13 +8,14 @@ from utils import Gacha
 # sidebars
 patch_choice = st.sidebar.selectbox(
     "Patch",
-    ["Through the Tide Home", "Woven Prologue", "Through the Tide Home+Woven Prologue", "Ideal Cage"]
+    ["Through the Tide Home+Woven Prologue+Ideal Cage", "Through the Tide Home", "Woven Prologue", "Ideal Cage", "Woven Prologue+Ideal Cage"]
 )
 patch_files = {
+    "Through the Tide Home+Woven Prologue+Ideal Cage" : "glb_through_the_tide_home_integrated",
     "Through the Tide Home" : "through_the_tide_home",
     "Woven Prologue" : "woven_prologue",
-    "Through the Tide Home+Woven Prologue" : "glb_through_the_tide_home_integrated",
-    "Ideal Cage" : "ideal_cage"
+    "Ideal Cage" : "ideal_cage",
+    "Woven Prologue+Ideal Cage" : "kr_jp_ideal_cage_integrated"
 }
 
 with open(f'data/patches/{patch_files[patch_choice]}.json', "r", encoding="utf-8") as f:
@@ -195,7 +196,6 @@ if selected_banner["title"] == "Member Target Banner":
     CURRENCY_IMG_PATH = "data/ui/blue_ticket.png"
     # set target type to unit
     gacha.change_target_type("unit")
-
     # make target list
     s_rank_units = [u["name"] for u in gacha.s_ranks if "base" in u["banner"]]
     a_rank_units = [u["name"] for u in gacha.a_ranks if u.get("rank") == "A" and ("base" in u["banner"] or "debut" in u["banner"])]
@@ -216,9 +216,7 @@ elif selected_banner["title"] == "CUB Target Banner":
     gacha.change_target_type("cub")
 
     # make target list
-    with open("data/category_rates/cub.json", "r", encoding="utf-8") as f:
-        cubs = json.load(f)
-        s_rank_cubs = [f'{u["name"]} ({u["unit"]})' for u in cubs if u["rarity"] == 6]
+    s_rank_cubs = [f'{u["name"]} ({u["unit"]})' for u in gacha.s_cubs if (u["rarity"] == 6) and ("base" in u["banner"] or "debut" in u["banner"])]
 
     st.markdown("### Select Targets")
 
@@ -228,7 +226,17 @@ elif selected_banner["title"] == "CUB Target Banner":
     gacha.change_target(6, selected_name)
 
 else: # for themed banner
-    gacha.change_target_type("")
+    CURRENCY_IMG_PATH = "data/ui/event_ticket.png"
+    # set target type to unit
+    gacha.change_target_type("debut")
+    # make target list
+    s_rank_units = [u["name"] for u in gacha.s_ranks if "debut" in u["banner"]]
+
+    st.markdown("### Current Target")
+
+    selected_s = st.selectbox("Debut Unit", s_rank_units)
+
+    gacha.change_target(6, selected_s)
 
 # rates
 with st.expander("Show Gacha Rates", expanded=False):
