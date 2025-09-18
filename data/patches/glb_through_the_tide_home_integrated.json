@@ -18,6 +18,10 @@
         "unit" : "Noctiluca"
       },
       {
+        "name": "CUB Target",
+        "unit" : "Scaled Rampart"
+      },
+      {
         "name": "Base Member Target",
         "unit" : "Vera: Geiravor",
         "rank" : "S"
