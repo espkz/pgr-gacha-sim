@@ -105,7 +105,6 @@ class Gacha:
                     unit["banner"] = ["debut"]
                 else:
                     unit["banner"] = ["base"]
-        print(self.a_ranks)
         # update
         self.category_files["A, B-Rank Omniframe"].clear()
         self.category_files["A, B-Rank Omniframe"].extend(self.a_ranks)

@@ -5,9 +5,10 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 - Organizable by patches
   - Through the Tide Home - Bianca: Crepuscule
   - Woven Prologue - Discord: Secator
-  - GLB Through the Tide Home integrated - Bianca: Crepuscule and Discord: Secator
-  - INCOMPLETE: Ideal Cage (PICTURES TEMPORARY UNTIL OFFICIAL RELEASE)
-- Themed Banner and Fate Themed Banner available
+  - GLB Through the Tide Home integrated - Bianca: Crepuscule, Discord: Secator, and Veronica: Aegis
+  - Ideal Cage (PICTURES TEMPORARY UNTIL OFFICIAL RELEASE)
+  - KR/JP Ideal Cage integrated (predicted for KR) - Discord: Secator and Veronica: Aegis
+- Themed Banner and Fate Themed Banner
 - Base Member Target with possible S-rank check
 - CUB banner
 
@@ -21,16 +22,14 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 - Pulling too fast will make it bug out (duh don't do that)
 - Gets a little slow because I think that's Streamlit latency (will look for a different place to host)
 - The A-rank check resets in Member Target if you swap patches (probably doesn't really matter but still)
-- I don't have assets for the Crepuscule+Noctiluca+Secator shards oops (also must update shards to keep track of if they're added or not)
+- I don't have assets for the Crepuscule+Noctiluca+Secator+Aegis shards oops (also must update shards to keep track of if they're added or not)
+  - Currently shards just go up to Geiravor and Wrathfang
 
 ## TODO
-- Update patch choices for future (Woven Prologue+Ideal Cage IP for KR/JP, Liv patch)
-- Veronica update (I'm missing assets help)
-- Uniframes (unfinished)
-
-### Maybe
+- Ideal Cage update (I'm missing assets help)
+- Uniframes (bruh) - unfinished
 - Weapon banner (is going to be a pain because of the individual off-rates but surely—)
-- Uniframe banner (bruh)
+
 - Arrival banner
   - 70% target and other two target selectors (just to make it easier lol)
   - It probably starts from Scire because Daren is (somehow) not dead yet (maybe just add all S-ranks for the sake of me not figuring that out)
