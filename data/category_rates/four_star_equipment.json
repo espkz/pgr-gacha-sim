@@ -1,9 +1,8 @@
 [
-  { "name": "Alice", "rarity": 4 , "img" : "data/img/four_star_equipment/alice.png"},
-  { "name": "Archimedes", "rarity": 4 , "img" : "data/img/four_star_equipment/archimedes.png"},
-  { "name": "Cunningham", "rarity": 4 , "img" : "data/img/four_star_equipment/cunningham.png"},
-  { "name": "Edison", "rarity": 4 , "img" : "data/img/four_star_equipment/edison.png"},
-  { "name": "Major Overclock Alloy", "rarity": 4 , "img" : "data/img/four_star_equipment/major_overclock_alloy.png"},
-  { "name": "Weapon Overclock Core II", "rarity": 4 , "img" : "data/img/four_star_equipment/weapon_overclock_core_ii.png"},
-  { "name": "Memory Overclock Circuit II", "rarity": 4 , "img" : "data/img/four_star_equipment/memory_overclock_circuit_ii.png"}
+  { "name": "Alice", "rarity": 4 , "banner" : "base", "img" : "data/img/four_star_equipment/alice.png"},
+  { "name": "Archimedes", "rarity": 4 , "banner" : "base", "img" : "data/img/four_star_equipment/archimedes.png"},
+  { "name": "Cunningham", "rarity": 4 , "banner" : "base", "img" : "data/img/four_star_equipment/cunningham.png"},
+  { "name": "Edison", "rarity": 4 , "banner" : "base", "img" : "data/img/four_star_equipment/edison.png"},
+
+  { "name": "Nimitz", "rarity": 4 , "banner" : "uniframe", "img" : "data/img/four_star_equipment/nimitz.png"}
 ]

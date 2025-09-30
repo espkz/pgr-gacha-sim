@@ -34,6 +34,7 @@ class Gacha:
 
         # load frames and cubs for updating
         self.s_ranks = load_json("data/category_rates/s_rank_omniframe.json")
+        self.uniframes = load_json("data/category_rates/uniframe.json")
         self.a_ranks = load_json("data/category_rates/a_b_rank_omniframe.json")
         self.s_cubs = [i for i in load_json("data/category_rates/cub.json") if i.get("rarity") == 6]
         self.a_cubs = [i for i in load_json("data/category_rates/cub.json") if i.get("rarity") == 5]
@@ -50,8 +51,11 @@ class Gacha:
             "A, B-Rank Omniframe": self.a_ranks,
             "Construct Shard": "data/category_rates/construct_shard.json",
             "4-star Equipment": "data/category_rates/four_star_equipment.json",
+            "Overclock Material": "data/category_rates/overclock_material.json",
             "EXP Material": "data/category_rates/exp_material.json",
             "Cog Box": "data/category_rates/cog_box.json",
+
+            "S-Rank Uniframe" : self.uniframes,
 
             "S-Rank CUB" : self.s_cubs,
             "A-Rank CUB" : self.a_cubs,
@@ -182,6 +186,11 @@ class Gacha:
             return self._get_six_star(self.targets["type"])
 
         items = load_json(self.category_files[chosen_category_name])
+        if chosen_category_name == "4-star Equipment":
+            if "uniframe" in self.gacha_banner:
+                items = [i for i in items if i.get("banner") == "uniframe"]
+            else:
+                items = [i for i in items if i.get("banner") == "base"]
         return choice(items)
 
     def _get_five_star_or_higher(self):
@@ -209,9 +218,11 @@ class Gacha:
             "": "S-Rank Omniframe",
             "unit": "S-Rank Omniframe",
             "debut" : "S-Rank Omniframe",
+            "uniframe": "S-Rank Uniframe",
             "cub": "S-Rank CUB",
         }
         key = types[type]
+        print(key)
 
         items = self.category_files[key]
         # if it's the base banner and there's a check target
@@ -221,6 +232,19 @@ class Gacha:
                 return next(i for i in s_ranks if i["name"] == self.targets[6])
             non_target_s_ranks = [i for i in s_ranks if i["name"] != self.targets[6]]
             return choice(non_target_s_ranks)
+        # if it's the uniframe banner (80%)
+        if self.targets["type"] == 'uniframe':
+            s_ranks = items
+            if self.has_six_star_target:
+                target_item = next((i for i in s_ranks if i["name"] == self.targets[6]), None)
+                if target_item:
+                    # probably should account for a debuting uniframe (but it's likely they won't release one lmao)
+                    # otherwise, 80%
+                    if random() < 0.8:
+                        return target_item
+                    else:
+                        non_target_items = [i for i in s_ranks if i["name"] != self.targets[6]]
+                        return choice(non_target_items)
         # if it's the cub banner and there's a target
         if self.targets["type"] == 'cub':
             if self.has_six_star_target:
@@ -236,6 +260,7 @@ class Gacha:
             return choice(non_target_s_ranks)
         # if it's the debut banner - targets["type"] == "debut"
         s_ranks = [i for i in items if i["name"] == self.targets[6]]
+        print(s_ranks)
         return choice(s_ranks)
 
     def _get_five_star(self, type="unit"):

@@ -1,0 +1,5 @@
+[
+  { "name": "Major Overclock Alloy", "rarity": 4 , "img" : "data/img/overclock_material/major_overclock_alloy.png"},
+  { "name": "Weapon Overclock Core II", "rarity": 4 , "img" : "data/img/overclock_material/weapon_overclock_core_ii.png"},
+  { "name": "Memory Overclock Circuit II", "rarity": 4 , "img" : "data/img/overclock_material/memory_overclock_circuit_ii.png"}
+]

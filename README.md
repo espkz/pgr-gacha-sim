@@ -10,6 +10,7 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
   - KR/JP Ideal Cage integrated (predicted for KR) - Discord: Secator and Veronica: Aegis
 - Themed Banner and Fate Themed Banner
 - Base Member Target with possible S-rank check
+- Uniframe banner
 - CUB banner
 
 ## Sources
@@ -27,7 +28,6 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 
 ## TODO
 - Ideal Cage update (I'm missing assets help)
-- Uniframes (bruh) - unfinished
 - Weapon banner (is going to be a pain because of the individual off-rates but surely—)
 
 - Arrival banner
