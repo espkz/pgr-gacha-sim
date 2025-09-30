@@ -183,7 +183,7 @@ with col2:
     st.image(selected_patch['img'], width=2000)
 st.markdown(f"""
 <div style="text-align:center;">
-    <h4>Global Start Date: {selected_patch['start_date']}</h4>
+    <h4>Start Date: {selected_patch['start_date']}</h4>
 </div>
 """, unsafe_allow_html=True)
 

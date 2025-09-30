@@ -2,8 +2,8 @@
     "patch_name": "Woven Prologue+Ideal Cage",
     "patch_type" : "S",
     "a_rank_patch_included" : 1,
-    "img": "data/img/patch_banners/ideal_cage.png",
-    "start_date" : "2025/09/26, 09:00 UTC",
+    "img": "data/img/patch_banners/ideal_cage_integrated.png",
+    "start_date" : "2025/09/26, 10:00 JST",
     "banners": [
       {
         "name": "Themed Banner",
