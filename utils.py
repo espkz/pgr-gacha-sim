@@ -222,7 +222,6 @@ class Gacha:
             "cub": "S-Rank CUB",
         }
         key = types[type]
-        print(key)
 
         items = self.category_files[key]
         # if it's the base banner and there's a check target
@@ -260,7 +259,6 @@ class Gacha:
             return choice(non_target_s_ranks)
         # if it's the debut banner - targets["type"] == "debut"
         s_ranks = [i for i in items if i["name"] == self.targets[6]]
-        print(s_ranks)
         return choice(s_ranks)
 
     def _get_five_star(self, type="unit"):

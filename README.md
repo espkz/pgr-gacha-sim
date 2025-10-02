@@ -27,6 +27,7 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 - Gets a little slow because I think that's Streamlit latency (will look for a different place to host)
 - The A-rank check resets in Member Target if you swap patches (probably doesn't really matter but still)
 - Future banners in IP don't give previous unit's shards (CUB and unit)
+  - ~~But also I'm not sure how to do it so it might have to wait until sync~~
 
 ## TODO
 - Weapon banner (is going to be a pain because of the individual off-rates but surely—)
