@@ -3,11 +3,11 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 
 ## Current State
 - Organizable by patches
+  - GLB Through the Tide Home integrated - Bianca: Crepuscule, Discord: Secator, and Veronica: Aegis
   - Through the Tide Home - Bianca: Crepuscule
   - Woven Prologue - Discord: Secator
-  - GLB Through the Tide Home integrated - Bianca: Crepuscule, Discord: Secator, and Veronica: Aegis
-  - Ideal Cage (PICTURES TEMPORARY UNTIL OFFICIAL RELEASE)
-  - KR/JP Ideal Cage integrated (predicted for KR) - Discord: Secator and Veronica: Aegis
+  - Ideal Cage - Veronica: Aegis
+  - KR/JP Ideal Cage integrated - Discord: Secator and Veronica: Aegis
 - Themed Banner and Fate Themed Banner
 - Base Member Target with possible S-rank check
 - Uniframe banner
@@ -16,18 +16,19 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 ## Sources
 - Huaxu
   - [Frame images](https://assets.huaxu.app/browse/cn/image/role/?layout=grid)
+  - Icons
+    - [Shards, currency](https://assets.huaxu.app/browse/glb/assets/product/texture/image/icontools/?layout=grid#)
+    - [Character)](https://assets.huaxu.app/browse/glb/assets/product/texture/image/role/?layout=grid#)
+    - [CUBs](https://assets.huaxu.app/browse/glb/assets/product/texture/image/rolepartner/?layout=grid)
 - [Gray Ravens](https://grayravens.com/wiki/GRAY_RAVENS)
 
 ## Current Issues
-- I think the Themed/CUB on debut also gives debut unit/CUB shards? Unsure though (also I don't have the assets so I have to find a replacement image)
 - Pulling too fast will make it bug out (duh don't do that)
 - Gets a little slow because I think that's Streamlit latency (will look for a different place to host)
 - The A-rank check resets in Member Target if you swap patches (probably doesn't really matter but still)
-- I don't have assets for the Crepuscule+Noctiluca+Secator+Aegis shards oops (also must update shards to keep track of if they're added or not)
-  - Currently shards just go up to Geiravor and Wrathfang
+- Future banners in IP don't give previous unit's shards (CUB and unit)
 
 ## TODO
-- Ideal Cage update (I'm missing assets help)
 - Weapon banner (is going to be a pain because of the individual off-rates but surely—)
 
 - Arrival banner

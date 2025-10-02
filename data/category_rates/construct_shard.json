@@ -25,6 +25,8 @@
   { "name": "Inver-Shard - Ardeo", "rarity": 4, "img" :  "data/img/construct_shard/shard_ardeo.png" },
   { "name": "Inver-Shard - Fulgor", "rarity": 4, "img" :  "data/img/construct_shard/shard_fulgor.png" },
   { "name": "Inver-Shard - Daybreak", "rarity": 4, "img" :  "data/img/construct_shard/shard_daybreak.png" },
+  { "name": "Inver-Shard - Secator", "rarity": 5, "img" :  "data/img/construct_shard/shard_secator.png" },
+
 
   { "name": "Inver-Shard - Luminance", "rarity": 5, "img" :  "data/img/construct_shard/shard_luminance.png" },
   { "name": "Inver-Shard - Entropy", "rarity": 5, "img" :  "data/img/construct_shard/shard_entropy.png" },
