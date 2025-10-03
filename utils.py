@@ -201,7 +201,6 @@ class Gacha:
             return self._get_five_star(self.targets["type"])
         elif chosen_category_rarity == 6:
             return self._get_six_star(self.targets["type"])
-        print(chosen_category_name)
         items = load_json(self.category_files[chosen_category_name])
         if chosen_category_name == "4-star Equipment":
             if "uniframe" in self.gacha_banner:
