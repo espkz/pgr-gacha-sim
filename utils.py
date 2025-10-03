@@ -17,6 +17,11 @@ def check_five_star_pity(file_path):
         data = json.load(f)
     return data["has_five_star_pity"]
 
+# def check_calibration(file_path):
+#     with open(file_path, "r") as f:
+#         data = json.load(f)
+#     return data["has_calibration"]
+
 class Gacha:
     def __init__(self, gacha_banner='standard_themed_banner', patch = 'glb_through_the_tide_home_integrated'):
         self.pity_count = 0
@@ -44,6 +49,7 @@ class Gacha:
         # update banner type and patch if applicable
         self.category_rates, self.pity = load_banner(self.gacha_banner_json)
         self.has_five_star_pity = True if check_five_star_pity(self.gacha_banner_json) else False
+        self.calibration = False # if check_calibration(self.gacha_banner_json) else None
         self.has_five_star_target = False
         self.has_six_star_target = False
 
@@ -281,9 +287,14 @@ class Gacha:
                 target_item = next((i for i in s_ranks if i["name"] == self.targets[6]), None)
                 if random() < 0.8:
                     return target_item
+                elif self.calibration:
+                    self.calibration = False
+                    return target_item
                 else:
+                    self.calibration = True
                     non_target_items = [i for i in s_ranks if i["name"] in target_item["off-pity"]]
                     return choice(non_target_items)
+            # insert choosing random weapon
 
         # if it's the debut banner - targets["type"] == "debut"
         s_ranks = [i for i in items if i["name"] == self.targets[6]]

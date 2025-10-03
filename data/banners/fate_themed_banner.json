@@ -2,6 +2,7 @@
     "title": "Fate Themed Banner",
     "pity" : 100,
     "has_five_star_pity" : 1,
+    "has_calibration" : 0,
     "rates": [
       {
         "name": "S-Rank Omniframe",

@@ -3,6 +3,7 @@
     "target" : "weapon",
     "pity" : 30,
     "has_five_star_pity" : 1,
+    "has_calibration" : 1,
     "rates": [
       {
         "name": "6-star Weapon",

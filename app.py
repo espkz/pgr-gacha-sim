@@ -76,6 +76,7 @@ def reset_all():
     gacha.bc = 0
     gacha.spoils = []
     st.session_state.last_pull = []
+    st.rerun()
 
 # inline base64 for local image (so it always renders)
 CURRENCY_IMG_PATH = "data/ui/bc.png" # standard BC
@@ -319,6 +320,8 @@ else:
 
 # pity counter
 st.markdown(f"### Pity Counter: {gacha.pity_count}/{selected_banner['pity']}")
+# if gacha.calibration:
+#     st.markdown("### Calibration Activated")
 st.divider()
 
 # sort spoils

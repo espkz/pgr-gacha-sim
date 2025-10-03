@@ -2,6 +2,7 @@
     "title": "Member Target Banner",
     "pity" : 60,
     "has_five_star_pity" : 1,
+    "has_calibration" : 0,
     "rates": [
       {
         "name": "S-Rank Omniframe",

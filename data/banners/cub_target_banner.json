@@ -3,6 +3,7 @@
     "target" : "CUB",
     "pity" : 20,
     "has_five_star_pity" : 1,
+    "has_calibration" : 0,
     "rates": [
       {
         "name": "S-Rank CUB",

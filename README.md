@@ -10,7 +10,7 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
   - KR/JP Ideal Cage integrated - Discord: Secator and Veronica: Aegis
 - Themed Banner and Fate Themed Banner
 - Base Member Target with possible S-rank check
-- Target Weapon (NO CALIBRATION YET)
+- Target Weapon (with calibration)
 - Uniframe banner
 - CUB banner
 
@@ -30,7 +30,7 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 - Future banners in IP don't give previous unit's shards (CUB and unit)
   - ~~But also I'm not sure how to do it so it might have to wait until sync~~
 - Target banner
-  - No calibration (Will get to it)
+  - Calibration exists but it's not visually there (because once it shows up it won't go away like what)
   - No uniqueness for five star and below weapons (~~but uh, do people really want to see what kind of five star they got?~~)
 
 ## TODO
