@@ -21,8 +21,8 @@ patch_files = {
 with open(f'data/patches/{patch_files[patch_choice]}.json', "r", encoding="utf-8") as f:
     selected_patch = json.load(f)
 
-permanent_banners = ["Base Member Target", "Target Uniframe", "CUB Target"] # add weapon and arrival later
-banner_order = ["Themed Banner", "Fate Themed Banner", "Base Member Target", "Target Uniframe", "CUB Target"] # set order
+permanent_banners = ["Base Member Target", "Target Weapon", "Target Uniframe", "CUB Target"] # add weapon and arrival later
+banner_order = ["Themed Banner", "Fate Themed Banner", "Base Member Target", "Target Weapon", "Target Uniframe", "CUB Target"] # set order
 banner_options = list(set([b["name"] for b in selected_patch["banners"]]+permanent_banners))
 ordered_banner_options = [b for b in banner_order if b in banner_options]
 
@@ -40,13 +40,13 @@ banner_files = {
     "Themed Banner" : "standard_themed_banner",
     "Fate Themed Banner" : "fate_themed_banner",
     "Base Member Target" : "member_target_banner",
+    "Target Weapon" : "target_weapon",
     "Target Uniframe" : "target_uniframe",
     "CUB Target" : "cub_target_banner"
 }
 
 with open(f'data/banners/{banner_files[banner_choice]}.json', "r", encoding="utf-8") as f:
     selected_banner = json.load(f)
-
 
 # initialize
 if "gacha" not in st.session_state or st.session_state.gacha_banner != banner_choice:
@@ -209,8 +209,24 @@ if selected_banner["title"] == "Member Target Banner":
     gacha.change_target(6, "" if selected_s == "Random" else selected_s)
     gacha.change_target(5, "" if selected_a == "Random" else selected_a)
 
+# target weapon banner UI
+elif selected_banner["title"] == "Target Weapon Banner":
+    # currency used is event ticket
+    CURRENCY_IMG_PATH = "data/ui/weapon_ticket.png"
+    # set target type to weapon
+    gacha.change_target_type("weapon")
+    # make target list
+    weapons = [f'{u["name"]} ({u["unit"]})' for u in gacha.six_star_weapons]
+
+    st.markdown("### Current Target")
+
+    selected_s = st.selectbox("Weapon Target", weapons)
+    selected_name = selected_s.split(" (")[0]
+
+    gacha.change_target(6, selected_name)
+
 # uniframe banner UI
-if selected_banner["title"] == "Target Uniframe Banner":
+elif selected_banner["title"] == "Target Uniframe Banner":
     # currency used is event ticket
     CURRENCY_IMG_PATH = "data/ui/event_ticket.png"
     # set target type to uniframe

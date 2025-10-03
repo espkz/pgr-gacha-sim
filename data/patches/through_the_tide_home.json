@@ -13,6 +13,16 @@
         "unit" : "Bianca: Crepuscule"
       },
       {
+        "name": "Target Weapon",
+        "weapon": "Aurora",
+        "unit": "Crepuscule",
+        "img": "data/img/weapon/six_star_weapon/aurora.png",
+        "off-pity": [
+          "Sorrow of Fata Morgana",
+          "Dark Falcon"
+        ]
+      },
+      {
         "name": "CUB Target",
         "unit" : "Noctiluca"
       },

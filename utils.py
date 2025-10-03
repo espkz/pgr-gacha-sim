@@ -36,6 +36,8 @@ class Gacha:
         self.s_ranks = load_json("data/category_rates/s_rank_omniframe.json")
         self.uniframes = load_json("data/category_rates/uniframe.json")
         self.a_ranks = load_json("data/category_rates/a_b_rank_omniframe.json")
+        self.six_star_weapons = load_json("data/category_rates/six_star_weapon.json")
+        self.five_star_weapons = load_json("data/category_rates/five_star_weapon.json")
         self.s_cubs = [i for i in load_json("data/category_rates/cub.json") if i.get("rarity") == 6]
         self.a_cubs = [i for i in load_json("data/category_rates/cub.json") if i.get("rarity") == 5]
 
@@ -44,7 +46,6 @@ class Gacha:
         self.has_five_star_pity = True if check_five_star_pity(self.gacha_banner_json) else False
         self.has_five_star_target = False
         self.has_six_star_target = False
-
 
         self.category_files = {
             "S-Rank Omniframe": self.s_ranks,
@@ -63,6 +64,12 @@ class Gacha:
             "CUB Overclock Material" : "data/category_rates/cub_overclock_material.json",
             "Support Skill Component": "data/category_rates/support_skill_component.json",
             "CUB Shard" : "data/category_rates/cub_shard.json",
+
+            "6-star Weapon" : self.six_star_weapons,
+            "5-star Weapon" : self.five_star_weapons,
+            "4-star Weapon" : "data/category_rates/four_star_weapon.json",
+            "3-star Weapon" : "data/category_rates/three_star_weapon.json"
+
         }
 
         self.targets = {
@@ -81,6 +88,7 @@ class Gacha:
         self.s_ranks = load_json("data/category_rates/s_rank_omniframe.json")
         self.a_ranks = load_json("data/category_rates/a_b_rank_omniframe.json")
         self.s_cubs = [i for i in load_json("data/category_rates/cub.json") if i.get("rarity") == 6]
+        self.six_star_weapons = load_json("data/category_rates/six_star_weapon.json")
 
         # apply patch
         s_construct_map = {c["name"]: c for c in self.s_ranks}
@@ -109,6 +117,13 @@ class Gacha:
                     unit["banner"] = ["debut"]
                 else:
                     unit["banner"] = ["base"]
+            elif "Target Weapon" in banner["name"]:
+                weapon = { "name": banner["weapon"],
+                           "unit" : banner["unit"],
+                           "rarity": 6 ,
+                           "img" : banner["img"],
+                           "off-pity" : banner["off-pity"]}
+                self.six_star_weapons.append(weapon)
         # update
         self.category_files["A, B-Rank Omniframe"].clear()
         self.category_files["A, B-Rank Omniframe"].extend(self.a_ranks)
@@ -116,6 +131,8 @@ class Gacha:
         self.category_files["S-Rank Omniframe"].extend(self.s_ranks)
         self.category_files["S-Rank CUB"].clear()
         self.category_files["S-Rank CUB"].extend(self.s_cubs)
+        self.category_files["6-star Weapon"].clear()
+        self.category_files["6-star Weapon"].extend(self.six_star_weapons)
     # update target
     def change_target(self, rarity = 5, name = ""):
         self.targets[rarity] = name
@@ -184,7 +201,7 @@ class Gacha:
             return self._get_five_star(self.targets["type"])
         elif chosen_category_rarity == 6:
             return self._get_six_star(self.targets["type"])
-
+        print(chosen_category_name)
         items = load_json(self.category_files[chosen_category_name])
         if chosen_category_name == "4-star Equipment":
             if "uniframe" in self.gacha_banner:
@@ -220,6 +237,7 @@ class Gacha:
             "debut" : "S-Rank Omniframe",
             "uniframe": "S-Rank Uniframe",
             "cub": "S-Rank CUB",
+            "weapon" : "6-star Weapon"
         }
         key = types[type]
 
@@ -257,6 +275,17 @@ class Gacha:
                         return target_item
             non_target_s_ranks = [i for i in items if i["name"] != self.targets[6]]
             return choice(non_target_s_ranks)
+        # if it's a weapon banner (80%)
+        if self.targets["type"] == 'weapon':
+            s_ranks = items
+            if self.has_six_star_target:
+                target_item = next((i for i in s_ranks if i["name"] == self.targets[6]), None)
+                if random() < 0.8:
+                    return target_item
+                else:
+                    non_target_items = [i for i in s_ranks if i["name"] in target_item["off-pity"]]
+                    return choice(non_target_items)
+
         # if it's the debut banner - targets["type"] == "debut"
         s_ranks = [i for i in items if i["name"] == self.targets[6]]
         return choice(s_ranks)
@@ -272,6 +301,7 @@ class Gacha:
             "debut": "A, B-Rank Omniframe", # because even with a debut S-rank A-rank should stay the same
             "unit" : "A, B-Rank Omniframe",
             "cub": "A-Rank CUB",
+            "weapon" : "5-star Weapon"
         }
         key = types[type]
 

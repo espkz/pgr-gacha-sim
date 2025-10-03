@@ -10,6 +10,26 @@
         "rank" : "A"
       },
       {
+        "name": "Target Weapon",
+        "weapon": "Aurora",
+        "unit": "Crepuscule",
+        "img": "data/img/weapon/six_star_weapon/aurora.png",
+        "off-pity": [
+          "Sorrow of Fata Morgana",
+          "Dark Falcon"
+        ]
+      },
+      {
+        "name": "Target Weapon",
+        "weapon": "Osseous Guillotine",
+        "unit": "Secator",
+        "img": "data/img/weapon/six_star_weapon/osseous_guillotine.png",
+        "off-pity": [
+          "Alpha-Omega",
+          "Fudo Myo-o"
+        ]
+      },
+      {
         "name": "CUB Target",
         "unit" : "Noctiluca"
       }

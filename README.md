@@ -10,6 +10,7 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
   - KR/JP Ideal Cage integrated - Discord: Secator and Veronica: Aegis
 - Themed Banner and Fate Themed Banner
 - Base Member Target with possible S-rank check
+- Target Weapon (NO CALIBRATION YET)
 - Uniframe banner
 - CUB banner
 
@@ -28,9 +29,10 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 - The A-rank check resets in Member Target if you swap patches (probably doesn't really matter but still)
 - Future banners in IP don't give previous unit's shards (CUB and unit)
   - ~~But also I'm not sure how to do it so it might have to wait until sync~~
+- No calibration on weapon banner (Will get to it)
 
 ## TODO
-- Weapon banner (is going to be a pain because of the individual off-rates but surely—)
+- Base weapon banner
 
 - Arrival banner
   - 70% target and other two target selectors (just to make it easier lol)
