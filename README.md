@@ -19,7 +19,7 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
   - [Frame images](https://assets.huaxu.app/browse/cn/image/role/?layout=grid)
   - Icons
     - [Shards, currency](https://assets.huaxu.app/browse/glb/assets/product/texture/image/icontools/?layout=grid#)
-    - [Character)](https://assets.huaxu.app/browse/glb/assets/product/texture/image/role/?layout=grid#)
+    - [Character](https://assets.huaxu.app/browse/glb/assets/product/texture/image/role/?layout=grid#)
     - [CUBs](https://assets.huaxu.app/browse/glb/assets/product/texture/image/rolepartner/?layout=grid)
 - [Gray Ravens](https://grayravens.com/wiki/GRAY_RAVENS)
 
