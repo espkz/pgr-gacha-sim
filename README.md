@@ -29,7 +29,9 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 - The A-rank check resets in Member Target if you swap patches (probably doesn't really matter but still)
 - Future banners in IP don't give previous unit's shards (CUB and unit)
   - ~~But also I'm not sure how to do it so it might have to wait until sync~~
-- No calibration on weapon banner (Will get to it)
+- Target banner
+  - No calibration (Will get to it)
+  - No uniqueness for five star and below weapons (~~but uh, do people really want to see what kind of five star they got?~~)
 
 ## TODO
 - Base weapon banner
