@@ -1,7 +1,11 @@
 { "name": "Inver-Shard - Crepuscule", "rarity": 4, "img" :  "data/category_img/construct_shard/shard_crepuscule.png" }
 { "name": "Booster Structural Part - Noctiluca", "rarity": 4, "img" :  "data/category_img/cub/shard_noctiluca.png" }
-
-{ "name": "Inver-Shard - Secator", "rarity": 4, "img" :  "data/category_img/construct_shard/shard_secator.png" }
-
 { "name": "Inver-Shard - Aegis", "rarity": 4, "img" :  "data/category_img/construct_shard/shard_aegis.png" }
 { "name": "Booster Structural Part - Scalefort", "rarity"": 4, "img" :  "data/category_img/cub/shard_scalefort.png" }
+
+{ "name": "Aurora", "unit" : "Crepuscule", "rarity": 6 , "img" : "data/img/six_star_weapon/aurora.png", "off-pity" :  ["Sorrow of Fata Morgana", "Dark Falcon"]}
+{ "name": "Osseous Guillotine", "unit" : "Secator", "rarity": 6 , "img" : "data/img/six_star_weapon/osseous_guillotine.png", "off-pity" :  ["Alpha-Omega", "Fudo Myo-o"]}
+{ "name": "Empyrean Wrath", "unit" : "Aegis", "rarity": 6 , "img" : "data/img/six_star_weapon/empyrean_wrath.png", "off-pity" :  ["Aurora", "Hecate"]}
+
+Template
+{ "name": "Aurora", "unit" : "Crepuscule", "rarity": 6 , "img" : "data/img/six_star_weapon/aurora.png", "off-pity" :  ["Aurora", "Hecate"]}

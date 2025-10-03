@@ -1,9 +1,9 @@
 [
-  { "name": "Camu: Crocotta", "rarity": 6 , "img" : "data/img/uniframe/crocotta.png"},
-  { "name": "Qu: Pavo", "rarity": 6 , "img" : "data/img/uniframe/pavo.png"},
-  { "name": "Selena: Tempest", "rarity": 6 , "img" : "data/img/uniframe/tempest.png"},
-  { "name": "Roland: Flambeau", "rarity": 6 , "img" : "data/img/uniframe/flambeau.png"},
-  { "name": "Pulao: Dragontoll", "rarity": 6 , "img" : "data/img/uniframe/dragontoll.png"},
-  { "name": "Haicma: Starveil", "rarity": 6 , "img" : "data/img/uniframe/starveil.png"},
-  { "name": "Noan: Arca", "rarity": 6 , "img" : "data/img/uniframe/arca.png"}
+  { "name": "Camu: Crocotta", "rarity": 6 , "img" : "data/img/unit/uniframe/crocotta.png"},
+  { "name": "Qu: Pavo", "rarity": 6 , "img" : "data/img/unit/uniframe/pavo.png"},
+  { "name": "Selena: Tempest", "rarity": 6 , "img" : "data/img/unit/uniframe/tempest.png"},
+  { "name": "Roland: Flambeau", "rarity": 6 , "img" : "data/img/unit/uniframe/flambeau.png"},
+  { "name": "Pulao: Dragontoll", "rarity": 6 , "img" : "data/img/unit/uniframe/dragontoll.png"},
+  { "name": "Haicma: Starveil", "rarity": 6 , "img" : "data/img/unit/uniframe/starveil.png"},
+  { "name": "Noan: Arca", "rarity": 6 , "img" : "data/img/unit/uniframe/arca.png"}
 ]

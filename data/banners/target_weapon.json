@@ -1,0 +1,38 @@
+{
+    "title": "Target Weapon Banner",
+    "target" : "weapon",
+    "pity" : 30,
+    "has_five_star_pity" : 1,
+    "rates": [
+      {
+        "name": "6-star Weapon",
+        "rarity": 6,
+        "rate": 0.05
+      },
+      {
+        "name": "5-star Weapon",
+        "rarity": 5,
+        "rate": 0.15
+      },
+      {
+        "name": "4-star Weapon",
+        "rarity": 4,
+        "rate": 0.3340
+      },
+      {
+        "name": "3-star Weapon",
+        "rarity": 4,
+        "rate": 0.2790
+      },
+      {
+        "name": "Cog Box",
+        "rarity": 4,
+        "rate": 0.0935
+      },
+      {
+        "name": "Overclock Material",
+        "rarity": 4,
+        "rate": 0.0935
+      }
+    ]
+}
