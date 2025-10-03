@@ -35,6 +35,9 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 
 ## TODO
 - Base weapon banner
+  - Similar to base unit banner where it goes up to Geiravor (2 patches behind)
+  - Uh... it also has Sirius (wtf)
+  - Otherwise percentages are the same as target weapon
 
 - Arrival banner
   - 70% target and other two target selectors (just to make it easier lol)
