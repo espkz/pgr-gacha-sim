@@ -7,6 +7,7 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
   - Through the Tide Home - Bianca: Crepuscule
   - Woven Prologue - Discord: Secator
   - Ideal Cage - Veronica: Aegis
+    - Empyrean Wrath off-pity is temporary
   - KR/JP Ideal Cage integrated - Discord: Secator and Veronica: Aegis
 - Themed Banner and Fate Themed Banner
 - Base Member Target with possible S-rank check
