@@ -37,10 +37,10 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 ## TODO
 - Base weapon banner
   - Similar to base unit banner where it goes up to Geiravor (2 patches behind)
-  - Uh... it also has Sirius (wtf)
+  - Uh... it also has Sirius (???)
   - Otherwise percentages are the same as target weapon
 
 - Arrival banner
-  - 70% target and other two target selectors (just to make it easier lol)
+  - 70% target and other two target selectors (just to make it easier)
   - It probably starts from Scire because Daren is (somehow) not dead yet (maybe just add all S-ranks for the sake of me not figuring that out)
   - Make sure targeted is not selectable from the other 15%s
