@@ -1,13 +1,13 @@
 # Punishing: Gray Raven Gacha Simulator
 I mostly made this because I saw the Uma Musume one and got jealous lol
 
-## Current State
+## Current Features
 - Organizable by patches
   - GLB Through the Tide Home integrated - Bianca: Crepuscule, Discord: Secator, and Veronica: Aegis
-  - Through the Tide Home - Bianca: Crepuscule
-  - Woven Prologue - Discord: Secator
   - Ideal Cage - Veronica: Aegis
   - KR/JP Ideal Cage integrated - Discord: Secator and Veronica: Aegis
+  - Where Nightmares Dwell - Liv: Limpidity
+    - Weapon/CUB names and assets are temporary
 - Themed Banner and Fate Themed Banner
 - Base Member Target with possible S-rank check
 - Target Weapon (with calibration)

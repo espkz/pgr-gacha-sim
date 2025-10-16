@@ -8,14 +8,13 @@ from utils import Gacha
 # sidebars
 patch_choice = st.sidebar.selectbox(
     "Patch",
-    ["Through the Tide Home+Woven Prologue+Ideal Cage", "Through the Tide Home", "Woven Prologue", "Ideal Cage", "Woven Prologue+Ideal Cage"]
+    ["Through the Tide Home+Woven Prologue+Ideal Cage", "Ideal Cage", "Woven Prologue+Ideal Cage", "Where Nightmares Dwell"]
 )
 patch_files = {
     "Through the Tide Home+Woven Prologue+Ideal Cage" : "glb_through_the_tide_home_integrated",
-    "Through the Tide Home" : "through_the_tide_home",
-    "Woven Prologue" : "woven_prologue",
     "Ideal Cage" : "ideal_cage",
-    "Woven Prologue+Ideal Cage" : "kr_jp_ideal_cage_integrated"
+    "Woven Prologue+Ideal Cage" : "kr_jp_ideal_cage_integrated",
+    "Where Nightmares Dwell" : "where_nightmares_dwell"
 }
 
 with open(f'data/patches/{patch_files[patch_choice]}.json', "r", encoding="utf-8") as f:

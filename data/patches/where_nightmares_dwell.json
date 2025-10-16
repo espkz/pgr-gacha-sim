@@ -1,0 +1,70 @@
+{
+    "patch_name": "Where Nightmares Dwell",
+    "patch_type" : "S",
+    "a_rank_patch_included" : 0,
+    "img": "data/img/patch_banners/where_nightmares_dwell.png",
+    "start_date" : "2025/11/13, 09:00 UTC",
+    "banners": [
+      {
+        "name": "Themed Banner",
+        "unit" : "Liv: Limpidity"
+      },
+      {
+        "name": "Fate Themed Banner",
+        "unit" : "Liv: Limpidity"
+      },
+      {
+        "name": "Target Weapon",
+        "weapon": "Aurora",
+        "unit": "Crepuscule",
+        "img": "data/img/weapon/six_star_weapon/aurora.png",
+        "off-pity": [
+          "Sorrow of Fata Morgana",
+          "Dark Falcon"
+        ]
+      },
+      {
+        "name": "Target Weapon",
+        "weapon": "Osseous Guillotine",
+        "unit": "Secator",
+        "img": "data/img/weapon/six_star_weapon/osseous_guillotine.png",
+        "off-pity": [
+          "Alpha-Omega",
+          "Fudo Myo-o"
+        ]
+      },
+      {
+        "name": "Target Weapon",
+        "weapon": "Empyrean Wrath",
+        "unit": "Aegis",
+        "img": "data/img/weapon/six_star_weapon/empyrean_wrath.png",
+        "off-pity": [
+          "Final Arbiter",
+          "Deathless Flame"
+        ]
+      },
+      {
+        "name": "Target Weapon",
+        "weapon": "Lotus Blade",
+        "unit": "Limpidity",
+        "img": "data/img/weapon/six_star_weapon/lotus_blade.png",
+        "off-pity": [
+          "Aurora",
+          "Hecate"
+        ]
+      },
+      {
+        "name": "CUB Target",
+        "unit" : "Liv CUB"
+      },
+      {
+        "name": "CUB Target",
+        "unit" : "Scaled Rampart"
+      },
+      {
+        "name": "Base Member Target",
+        "unit" : "Bianca: Crepuscule",
+        "rank" : "S"
+      }
+    ]
+}
