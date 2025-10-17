@@ -31,5 +31,5 @@
   { "name": "Wrathfang", "unit": "Geiravor", "rarity": 6, "banner" : ["base"], "img" : "data/img/cub/wrathfang.png" },
   { "name": "Noctiluca", "unit": "Crepuscule", "rarity": 6, "banner" : ["base"], "img" : "data/img/cub/noctiluca.png" },
   { "name": "Scaled Rampart", "unit": "Aegis", "rarity": 6, "banner" : [""], "img" : "data/img/cub/scaled_rampart.png" },
-  { "name": "Liv CUB", "unit": "Limpidity", "rarity": 6, "banner" : [""], "img" : "data/img/cub/liv_cub.png" }
+  { "name": "Fufu", "unit": "Limpidity", "rarity": 6, "banner" : [""], "img" : "data/img/cub/fufu.png" }
 ]

@@ -45,9 +45,9 @@
       },
       {
         "name": "Target Weapon",
-        "weapon": "Lotus Blade",
+        "weapon": "Ripples of the Floating Sea",
         "unit": "Limpidity",
-        "img": "data/img/weapon/six_star_weapon/lotus_blade.png",
+        "img": "data/img/weapon/six_star_weapon/ripples_of_the_floating_sea.png",
         "off-pity": [
           "Aurora",
           "Hecate"
@@ -55,7 +55,7 @@
       },
       {
         "name": "CUB Target",
-        "unit" : "Liv CUB"
+        "unit" : "Fufu"
       },
       {
         "name": "CUB Target",

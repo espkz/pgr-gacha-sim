@@ -7,7 +7,7 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
   - Ideal Cage - Veronica: Aegis
   - KR/JP Ideal Cage integrated - Discord: Secator and Veronica: Aegis
   - Where Nightmares Dwell - Liv: Limpidity
-    - Weapon/CUB names and assets are temporary
+    - Weapon/CUB names and assets are from translated equipment
 - Themed Banner and Fate Themed Banner
 - Base Member Target with possible S-rank check
 - Target Weapon (with calibration)
