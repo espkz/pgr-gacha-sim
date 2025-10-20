@@ -20,8 +20,8 @@ patch_files = {
 with open(f'data/patches/{patch_files[patch_choice]}.json', "r", encoding="utf-8") as f:
     selected_patch = json.load(f)
 
-permanent_banners = ["Base Member Target", "Target Weapon", "Target Uniframe", "CUB Target"] # add weapon and arrival later
-banner_order = ["Themed Banner", "Fate Themed Banner", "Base Member Target", "Target Weapon", "Target Uniframe", "CUB Target"] # set order
+permanent_banners = ["Base Member Target", "Target Weapon", "Weapon", "Target Uniframe", "CUB Target"] # add arrival later
+banner_order = ["Themed Banner", "Fate Themed Banner", "Base Member Target", "Target Weapon", "Weapon", "Target Uniframe", "CUB Target"] # set order
 banner_options = list(set([b["name"] for b in selected_patch["banners"]]+permanent_banners))
 ordered_banner_options = [b for b in banner_order if b in banner_options]
 
@@ -40,6 +40,7 @@ banner_files = {
     "Fate Themed Banner" : "fate_themed_banner",
     "Base Member Target" : "member_target_banner",
     "Target Weapon" : "target_weapon",
+    "Weapon" : "weapon",
     "Target Uniframe" : "target_uniframe",
     "CUB Target" : "cub_target_banner"
 }
@@ -216,7 +217,7 @@ elif selected_banner["title"] == "Target Weapon Banner":
     # set target type to weapon
     gacha.change_target_type("weapon")
     # make target list
-    weapons = [f'{u["name"]} ({u["unit"]})' for u in gacha.six_star_weapons]
+    weapons = [f'{u["name"]} ({u["unit"]})' for u in gacha.six_star_weapons if "target" in u["banner"]]
 
     st.markdown("### Current Target")
 
@@ -224,6 +225,13 @@ elif selected_banner["title"] == "Target Weapon Banner":
     selected_name = selected_s.split(" (")[0]
 
     gacha.change_target(6, selected_name)
+
+# target weapon banner UI
+elif selected_banner["title"] == "Weapon Banner":
+    # currency used is event ticket
+    CURRENCY_IMG_PATH = "data/ui/blue_weapon_ticket.png"
+    # set target type to weapon
+    gacha.change_target_type("weapon")
 
 # uniframe banner UI
 elif selected_banner["title"] == "Target Uniframe Banner":

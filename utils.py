@@ -127,6 +127,7 @@ class Gacha:
                 weapon = { "name": banner["weapon"],
                            "unit" : banner["unit"],
                            "rarity": 6 ,
+                           "banner" : banner["banner"],
                            "img" : banner["img"],
                            "off-pity" : banner["off-pity"]}
                 self.six_star_weapons.append(weapon)
@@ -280,10 +281,11 @@ class Gacha:
                         return target_item
             non_target_s_ranks = [i for i in items if i["name"] != self.targets[6]]
             return choice(non_target_s_ranks)
-        # if it's a weapon banner (80%)
+        # if it's a weapon banner
         if self.targets["type"] == 'weapon':
-            s_ranks = items
+            # target (80/20)
             if self.has_six_star_target:
+                s_ranks = [i for i in items if "target" in i["banner"]]
                 target_item = next((i for i in s_ranks if i["name"] == self.targets[6]), None)
                 if random() < 0.8:
                     return target_item
@@ -294,7 +296,9 @@ class Gacha:
                     self.calibration = True
                     non_target_items = [i for i in s_ranks if i["name"] in target_item["off-pity"]]
                     return choice(non_target_items)
-            # insert choosing random weapon
+            # base banner
+            s_ranks = [i for i in items if "base" in i["banner"]]
+            return choice(s_ranks)
 
         # if it's the debut banner - targets["type"] == "debut"
         s_ranks = [i for i in items if i["name"] == self.targets[6]]

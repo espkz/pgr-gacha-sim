@@ -10,7 +10,8 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
     - Weapon/CUB names and assets are from translated equipment
 - Themed Banner and Fate Themed Banner
 - Base Member Target with possible S-rank check
-- Target Weapon (with calibration)
+- Target Weapon banner (with calibration)
+- Base Weapon banner
 - Uniframe banner
 - CUB banner
 
@@ -24,6 +25,7 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 - [Gray Ravens](https://grayravens.com/wiki/GRAY_RAVENS)
 
 ## Current Issues
+- Windows doesn't show the star for 5-star/4-star/3-star weapon in test which... why....
 - Pulling too fast will make it bug out (duh don't do that)
 - Gets a little slow because I think that's Streamlit latency (will look for a different place to host)
 - The A-rank check resets in Member Target if you swap patches (probably doesn't really matter but still)
@@ -34,10 +36,6 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
   - No uniqueness for five star and below weapons (~~but uh, do people really want to see what kind of five star they got?~~)
 
 ## TODO
-- Base weapon banner
-  - Similar to base unit banner where it goes up to Geiravor (2 patches behind)
-  - Uh... it also has Sirius (???)
-  - Otherwise percentages are the same as target weapon
 
 - Arrival banner
   - 70% target and other two target selectors (just to make it easier)

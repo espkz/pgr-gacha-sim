@@ -17,6 +17,7 @@
         "name": "Target Weapon",
         "weapon": "Aurora",
         "unit": "Crepuscule",
+        "banner" : ["target"],
         "img": "data/img/weapon/six_star_weapon/aurora.png",
         "off-pity": [
           "Sorrow of Fata Morgana",
@@ -27,6 +28,7 @@
         "name": "Target Weapon",
         "weapon": "Osseous Guillotine",
         "unit": "Secator",
+        "banner" : ["target"],
         "img": "data/img/weapon/six_star_weapon/osseous_guillotine.png",
         "off-pity": [
           "Alpha-Omega",
@@ -37,6 +39,7 @@
         "name": "Target Weapon",
         "weapon": "Empyrean Wrath",
         "unit": "Aegis",
+        "banner" : ["target"],
         "img": "data/img/weapon/six_star_weapon/empyrean_wrath.png",
         "off-pity": [
           "Final Arbiter",
