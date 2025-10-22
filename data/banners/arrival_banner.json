@@ -1,0 +1,43 @@
+{
+    "title": "Arrival Banner",
+    "pity" : 60,
+    "has_five_star_pity" : 1,
+    "has_calibration" : 1,
+    "rates": [
+      {
+        "name": "S-Rank Omniframe",
+        "rarity": 6,
+        "rate": 0.005
+      },
+      {
+        "name": "A, B-Rank Omniframe",
+        "rarity": 5,
+        "rate": 0.1395
+      },
+      {
+        "name": "Construct Shard",
+        "rarity": 4,
+        "rate": 0.2211
+      },
+      {
+        "name": "4-star Equipment",
+        "rarity": 4,
+        "rate": 0.2839
+      },
+      {
+        "name": "Overclock Material",
+        "rarity": 4,
+        "rate": 0.1442
+      },
+      {
+        "name": "EXP Material",
+        "rarity": 4,
+        "rate": 0.0481
+      },
+      {
+        "name": "Cog Box",
+        "rarity": 4,
+        "rate": 0.1442
+      }
+    ]
+}

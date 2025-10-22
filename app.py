@@ -20,8 +20,8 @@ patch_files = {
 with open(f'data/patches/{patch_files[patch_choice]}.json', "r", encoding="utf-8") as f:
     selected_patch = json.load(f)
 
-permanent_banners = ["Base Member Target", "Target Weapon", "Weapon", "Target Uniframe", "CUB Target"] # add arrival later
-banner_order = ["Themed Banner", "Fate Themed Banner", "Base Member Target", "Target Weapon", "Weapon", "Target Uniframe", "CUB Target"] # set order
+permanent_banners = ["Arrival Banner", "Fate Arrival Banner", "Base Member Target", "Target Weapon", "Weapon", "Target Uniframe", "CUB Target"] # add arrival later
+banner_order = ["Themed Banner", "Fate Themed Banner", "Arrival Banner", "Fate Arrival Banner", "Base Member Target", "Target Weapon", "Weapon", "Target Uniframe", "CUB Target"] # set order
 banner_options = list(set([b["name"] for b in selected_patch["banners"]]+permanent_banners))
 ordered_banner_options = [b for b in banner_order if b in banner_options]
 
@@ -38,6 +38,8 @@ banner_choice = st.sidebar.selectbox(
 banner_files = {
     "Themed Banner" : "standard_themed_banner",
     "Fate Themed Banner" : "fate_themed_banner",
+    "Arrival Banner": "arrival_banner",
+    "Fate Arrival Banner": "fate_arrival_banner",
     "Base Member Target" : "member_target_banner",
     "Target Weapon" : "target_weapon",
     "Weapon" : "weapon",
@@ -198,6 +200,7 @@ if selected_banner["title"] == "Member Target Banner":
     CURRENCY_IMG_PATH = "data/ui/blue_ticket.png"
     # set target type to unit
     gacha.change_target_type("unit")
+    gacha.reset_off_pities()
     # make target list
     s_rank_units = [u["name"] for u in gacha.s_ranks if "base" in u["banner"]]
     a_rank_units = [u["name"] for u in gacha.a_ranks if u.get("rank") == "A" and ("base" in u["banner"] or "debut" in u["banner"])]
@@ -212,10 +215,11 @@ if selected_banner["title"] == "Member Target Banner":
 
 # target weapon banner UI
 elif selected_banner["title"] == "Target Weapon Banner":
-    # currency used is event ticket
+    # currency used is weapon ticket
     CURRENCY_IMG_PATH = "data/ui/weapon_ticket.png"
     # set target type to weapon
     gacha.change_target_type("weapon")
+    gacha.reset_off_pities()
     # make target list
     weapons = [f'{u["name"]} ({u["unit"]})' for u in gacha.six_star_weapons if "target" in u["banner"]]
 
@@ -226,12 +230,13 @@ elif selected_banner["title"] == "Target Weapon Banner":
 
     gacha.change_target(6, selected_name)
 
-# target weapon banner UI
+# base weapon banner UI
 elif selected_banner["title"] == "Weapon Banner":
-    # currency used is event ticket
+    # currency used is blue weapon ticket
     CURRENCY_IMG_PATH = "data/ui/blue_weapon_ticket.png"
     # set target type to weapon
     gacha.change_target_type("weapon")
+    gacha.reset_off_pities()
 
 # uniframe banner UI
 elif selected_banner["title"] == "Target Uniframe Banner":
@@ -239,6 +244,7 @@ elif selected_banner["title"] == "Target Uniframe Banner":
     CURRENCY_IMG_PATH = "data/ui/event_ticket.png"
     # set target type to uniframe
     gacha.change_target_type("uniframe")
+    gacha.reset_off_pities()
     # make target list
     uniframes = [u["name"] for u in gacha.uniframes]
     st.markdown("### Select Targets")
@@ -249,10 +255,11 @@ elif selected_banner["title"] == "Target Uniframe Banner":
 
 # CUB banner UI
 elif selected_banner["title"] == "CUB Target Banner":
-    # currency used is blue ticket
+    # currency used is cub ticket
     CURRENCY_IMG_PATH = "data/ui/cub_ticket.png"
     # set target type to unit
     gacha.change_target_type("cub")
+    gacha.reset_off_pities()
 
     # make target list
     s_rank_cubs = [f'{u["name"]} ({u["unit"]})' for u in gacha.s_cubs if (u["rarity"] == 6) and ("base" in u["banner"] or "debut" in u["banner"])]
@@ -264,10 +271,35 @@ elif selected_banner["title"] == "CUB Target Banner":
 
     gacha.change_target(6, selected_name)
 
+# Fate/Standard Arrival Banner UI
+elif "Arrival" in selected_banner["title"]:
+    CURRENCY_IMG_PATH = "data/ui/event_ticket.png"
+    gacha.change_target_type("unit")
+    gacha.reset_off_pities()
+    # make arrival list
+    s_ranks = [u["name"] for u in gacha.s_ranks if "base" in u["banner"]]
+    arrival_starter = "Karenina: Scire" # daren...
+    current_arrival_ranks = s_ranks[s_ranks.index(arrival_starter):]
+
+    st.markdown("### Current Targets")
+
+    arrival_selector, arrival_off_pity_1, arrival_off_pity_2 = st.columns(3)
+    with arrival_selector:
+        selected_s = st.selectbox("Select Target Unit", current_arrival_ranks)
+        gacha.change_target(6, selected_s)
+    with arrival_off_pity_1:
+        remaining_units_1 = [u for u in current_arrival_ranks if u != selected_s]
+        off_pity_1 = st.selectbox("Select first off-pity", remaining_units_1)
+        gacha.change_off_pities(off_pity_1, 0)
+    with arrival_off_pity_2:
+        remaining_units_2 = [u for u in current_arrival_ranks if u not in (selected_s, off_pity_1)]
+        off_pity_2 = st.selectbox("Select second off-pity", remaining_units_2)
+        gacha.change_off_pities(off_pity_2, 1)
+
 else: # for themed banner
     CURRENCY_IMG_PATH = "data/ui/event_ticket.png"
-    # set target type to unit
     gacha.change_target_type("debut")
+    gacha.reset_off_pities()
     # make target list
     s_rank_units = [u["name"] for u in gacha.s_ranks if "debut" in u["banner"]]
 

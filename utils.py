@@ -81,7 +81,8 @@ class Gacha:
         self.targets = {
             "type" : "",
             5 : "",
-            6 : ""
+            6 : "",
+            "off_pity" : []
         }
 
     def update_patch(self, patch):
@@ -152,6 +153,22 @@ class Gacha:
     def change_target_type(self, type="unit"):
         # unit or cub
         self.targets["type"] = type
+
+    def change_off_pities(self, off_pity, position = 0):
+        off_pity_list = self.targets["off_pity"]
+        if len(off_pity_list) == 0:
+            self.targets["off_pity"].append(off_pity)
+        elif len(off_pity_list) == 1:
+            if position == 0:
+                self.targets["off_pity"][0] = off_pity
+            else:
+                self.targets["off_pity"].append(off_pity)
+        # off-pity list is full
+        else:
+            self.targets["off_pity"][position] = off_pity
+
+    def reset_off_pities(self):
+        self.targets["off_pity"] = []
 
     def single_pull(self):
         return self._pull(count=1)
@@ -248,13 +265,23 @@ class Gacha:
         key = types[type]
 
         items = self.category_files[key]
-        # if it's the base banner and there's a check target
+        # if it's the base/arrival banner and there's a check target
         if self.targets["type"] == 'unit':
-            s_ranks = [i for i in items if "base" in i["banner"]]
-            if self.has_six_star_target:
-                return next(i for i in s_ranks if i["name"] == self.targets[6])
-            non_target_s_ranks = [i for i in s_ranks if i["name"] != self.targets[6]]
-            return choice(non_target_s_ranks)
+            # base
+            if len(self.targets["off_pity"]) == 0:
+                s_ranks = [i for i in items if "base" in i["banner"]]
+                if self.has_six_star_target:
+                    return next(i for i in s_ranks if i["name"] == self.targets[6])
+                non_target_s_ranks = [i for i in s_ranks if i["name"] != self.targets[6]]
+                return choice(non_target_s_ranks)
+            # arrival (70%)
+            else:
+                if random() < 0.7:
+                    return next(i for i in items if i["name"] == self.targets[6])
+                else:
+                    off_pity_item = choice(self.targets["off_pity"])
+                    return next(i for i in items if i["name"] == off_pity_item)
+
         # if it's the uniframe banner (80%)
         if self.targets["type"] == 'uniframe':
             s_ranks = items

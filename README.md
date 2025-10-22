@@ -8,7 +8,10 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
   - KR/JP Ideal Cage integrated - Discord: Secator and Veronica: Aegis
   - Where Nightmares Dwell - Liv: Limpidity
     - Weapon/CUB names and assets are from translated equipment
+### Banners
 - Themed Banner and Fate Themed Banner
+- Arrival Banner and Fate Arrival Banner
+  - Selectable units from units after Karenina: Scire (~~I forgot what units are left for the dead and not part of it~~)
 - Base Member Target with possible S-rank check
 - Target Weapon banner (with calibration)
 - Base Weapon banner
@@ -31,13 +34,11 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 - The A-rank check resets in Member Target if you swap patches (probably doesn't really matter but still)
 - Future banners in IP don't give previous unit's shards (CUB and unit)
   - ~~But also I'm not sure how to do it so it might have to wait until sync~~
-- Target banner
+- Target weapon and arrival banner
   - Calibration exists but it's not visually there (because once it shows up it won't go away like what)
   - No uniqueness for five star and below weapons (~~but uh, do people really want to see what kind of five star they got?~~)
 
 ## TODO
 
-- Arrival banner
-  - 70% target and other two target selectors (just to make it easier)
-  - It probably starts from Scire because Daren is (somehow) not dead yet (maybe just add all S-ranks for the sake of me not figuring that out)
-  - Make sure targeted is not selectable from the other 15%s
+- [ ] Move it to a more scalable platform
+- [ ] Patch cleanup for post-integrated patches (also a general code cleanup to be honest)
