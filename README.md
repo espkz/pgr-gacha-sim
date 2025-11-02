@@ -7,7 +7,8 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
   - Ideal Cage - Veronica: Aegis
   - KR/JP Ideal Cage integrated - Discord: Secator and Veronica: Aegis
   - Where Nightmares Dwell - Liv: Limpidity
-    - Weapon/CUB names and assets are from translated equipment
+    - Weapon name and assets are from translated equipment
+    - DOESN'T ACCOUNT FOR NEW PHYLO TREE BANNER AND PERIOD
 ### Banners
 - Themed Banner and Fate Themed Banner
 - Arrival Banner and Fate Arrival Banner
@@ -37,6 +38,9 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 - Target weapon and arrival banner
   - Calibration exists but it's not visually there (because once it shows up it won't go away like what)
   - No uniqueness for five star and below weapons (~~but uh, do people really want to see what kind of five star they got?~~)
+- Liv's banner will be **separate** — weapon and CUB too
+  - Phylo Tree banner operates the same as Themed, 100% rate up but unsure when it returns
+  - Weapon and CUB targetable if the unit debuts/reruns
 
 ## TODO
 
