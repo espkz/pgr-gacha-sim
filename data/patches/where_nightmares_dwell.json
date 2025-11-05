@@ -48,10 +48,10 @@
       },
       {
         "name": "Target Weapon",
-        "weapon": "Ripples of the Floating Sea",
+        "weapon": "Ripples of the Aloft Sea",
         "unit": "Limpidity",
         "banner" : ["target"],
-        "img": "data/img/weapon/six_star_weapon/ripples_of_the_floating_sea.png",
+        "img": "data/img/weapon/six_star_weapon/ripples_of_the_aloft_sea.png",
         "off-pity": [
           "Aurora",
           "Hecate"

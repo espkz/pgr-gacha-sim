@@ -7,8 +7,7 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
   - Ideal Cage - Veronica: Aegis
   - KR/JP Ideal Cage integrated - Discord: Secator and Veronica: Aegis
   - Where Nightmares Dwell - Liv: Limpidity
-    - Weapon name and assets are from translated equipment
-    - DOESN'T ACCOUNT FOR NEW PHYLO TREE BANNER AND PERIOD
+    - DOESN'T ACCOUNT FOR NEW PHYLO TREE BANNER AND PERIOD (I'm currently unsure how it will work so I will leave it as is for now)
 ### Banners
 - Themed Banner and Fate Themed Banner
 - Arrival Banner and Fate Arrival Banner

@@ -6,7 +6,7 @@
 { "name": "Aurora", "unit" : "Crepuscule", "rarity": 6 , "img" : "data/img/six_star_weapon/aurora.png", "off-pity" :  ["Sorrow of Fata Morgana", "Dark Falcon"]}
 { "name": "Osseous Guillotine", "unit" : "Secator", "rarity": 6 , "img" : "data/img/six_star_weapon/osseous_guillotine.png", "off-pity" :  ["Alpha-Omega", "Fudo Myo-o"]}
 { "name": "Empyrean Wrath", "unit" : "Aegis", "rarity": 6 , "img" : "data/img/six_star_weapon/empyrean_wrath.png", "off-pity" :  ["Final Arbiter", "Deathless Flame"]}
-{ "name": "Lotus Blade", "unit" : "Limpidity", "rarity": 6 , "img" : "data/img/six_star_weapon/lotus_blade.png", "off-pity" :  ["Aurora", "Hecate"]}
+{ "name": "Ripples of the Aloft Sea", "unit" : "Limpidity", "rarity": 6 , "img" : "data/img/six_star_weapon/ripples_of_the_aloft_sea.png", "off-pity" :  ["Aurora", "Hecate"]}
 
 Template
 { "name": "Aurora", "unit" : "Crepuscule", "rarity": 6 , "img" : "data/img/six_star_weapon/aurora.png", "off-pity" :  ["Aurora", "Hecate"]}
