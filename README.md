@@ -3,11 +3,8 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 
 ## Current Features
 - Organizable by patches
-  - GLB Through the Tide Home integrated - Bianca: Crepuscule, Discord: Secator, and Veronica: Aegis
-  - Ideal Cage - Veronica: Aegis
-  - KR/JP Ideal Cage integrated - Discord: Secator and Veronica: Aegis
-  - Where Nightmares Dwell - Liv: Limpidity
-    - DOESN'T ACCOUNT FOR NEW PHYLO TREE BANNER AND PERIOD (I'm currently unsure how it will work so I will leave it as is for now)
+  - Teddy: Spectre - Liv: Limpidity
+
 ### Banners
 - Themed Banner and Fate Themed Banner
 - Arrival Banner and Fate Arrival Banner
@@ -22,12 +19,13 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 - Huaxu
   - [Frame images](https://assets.huaxu.app/browse/cn/image/role/?layout=grid)
   - Icons
-    - [Shards, currency](https://assets.huaxu.app/browse/glb/assets/product/texture/image/icontools/?layout=grid#)
+    - [Shards, currency, weapons](https://assets.huaxu.app/browse/glb/assets/product/texture/image/icontools/?layout=grid#)
     - [Character](https://assets.huaxu.app/browse/glb/assets/product/texture/image/role/?layout=grid#)
     - [CUBs](https://assets.huaxu.app/browse/glb/assets/product/texture/image/rolepartner/?layout=grid)
 - [Gray Ravens](https://grayravens.com/wiki/GRAY_RAVENS)
 
 ## Current Issues
+- Doesn't account for the Phylotree banner and Limpidity
 - Windows doesn't show the star for 5-star/4-star/3-star weapon in test which... why....
 - Pulling too fast will make it bug out (duh don't do that)
 - Gets a little slow because I think that's Streamlit latency (will look for a different place to host)
@@ -45,3 +43,4 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 
 - [ ] Move it to a more scalable platform
 - [ ] Patch cleanup for post-integrated patches (also a general code cleanup to be honest)
+- [ ] Withering Crown (Arete)

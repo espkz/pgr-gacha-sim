@@ -1,12 +1,14 @@
-{ "name": "Inver-Shard - Crepuscule", "rarity": 4, "img" :  "data/category_img/construct_shard/shard_crepuscule.png" }
-{ "name": "Booster Structural Part - Noctiluca", "rarity": 4, "img" :  "data/category_img/cub/shard_noctiluca.png" }
-{ "name": "Inver-Shard - Aegis", "rarity": 4, "img" :  "data/category_img/construct_shard/shard_aegis.png" }
-{ "name": "Booster Structural Part - Scalefort", "rarity"": 4, "img" :  "data/category_img/cub/shard_scalefort.png" }
-
-{ "name": "Aurora", "unit" : "Crepuscule", "rarity": 6 , "img" : "data/img/six_star_weapon/aurora.png", "off-pity" :  ["Sorrow of Fata Morgana", "Dark Falcon"]}
-{ "name": "Osseous Guillotine", "unit" : "Secator", "rarity": 6 , "img" : "data/img/six_star_weapon/osseous_guillotine.png", "off-pity" :  ["Alpha-Omega", "Fudo Myo-o"]}
-{ "name": "Empyrean Wrath", "unit" : "Aegis", "rarity": 6 , "img" : "data/img/six_star_weapon/empyrean_wrath.png", "off-pity" :  ["Final Arbiter", "Deathless Flame"]}
-{ "name": "Ripples of the Aloft Sea", "unit" : "Limpidity", "rarity": 6 , "img" : "data/img/six_star_weapon/ripples_of_the_aloft_sea.png", "off-pity" :  ["Aurora", "Hecate"]}
-
 Template
 { "name": "Aurora", "unit" : "Crepuscule", "rarity": 6 , "img" : "data/img/six_star_weapon/aurora.png", "off-pity" :  ["Aurora", "Hecate"]}
+
+
+{ "name": "Inver-Shard - Spectre", "rarity": 5, "img" :  "data/img/construct_shard/shard_spectre.png" }
+
+
+Phylotree
+{ "name": "Inver-Shard - Limpidity", "rarity": 5, "img" :  "data/img/construct_shard/shard_limpidity.png" }
+{ "name": "Ripples of the Aloft Sea", "unit" : "Limpidity", "rarity": 6 , "img" : "data/img/six_star_weapon/ripples_of_the_aloft_sea.png", "off-pity" :  ["Orpheus' Lullaby", "Osseous Guillotine"]}
+
+{ "name": "Levvi", "unit": "Limpidity", "rarity": 6, "banner" : [""], "img" : "data/img/cub/levvi.png" }
+{ "name": "Booster Structural Part - Levvi", "rarity"": 5, "img" :  "data/category_img/cub/shard_levvi.png" }
+

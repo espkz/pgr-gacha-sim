@@ -1,0 +1,47 @@
+{
+    "patch_name": "Sightline Breach",
+    "patch_type" : "S",
+    "img": "data/img/patch_banners/sightline_breach.png",
+    "start_date" : "2025/12/23, 05:00 UTC",
+    "banners": [
+      {
+        "name": "Themed Banner",
+        "unit" : "Teddy: Spectre"
+      },
+      {
+        "name": "Fate Themed Banner",
+        "unit" : "Teddy: Spectre"
+      },
+      {
+        "name": "Target Weapon",
+        "weapon": "Empyrean Wrath",
+        "unit": "Aegis",
+        "banner" : ["target", "base"],
+        "img": "data/img/weapon/six_star_weapon/empyrean_wrath.png",
+        "off-pity": [
+          "Final Arbiter",
+          "Deathless Flame"
+        ]
+      },
+      {
+        "name": "Target Weapon",
+        "weapon": "Neon Wayfarer",
+        "unit": "Spectre",
+        "banner" : ["target"],
+        "img": "data/img/weapon/six_star_weapon/neon_wayfarer.png",
+        "off-pity": [
+          "Aurora",
+          "Renewed Dawn"
+        ]
+      },
+      {
+        "name": "CUB Target",
+        "unit" : "Beep-Boop"
+      },
+      {
+        "name": "Base Member Target",
+        "unit" : "Veronica: Aegis",
+        "rank" : "S"
+      }
+    ]
+}

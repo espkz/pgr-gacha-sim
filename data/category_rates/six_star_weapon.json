@@ -65,5 +65,7 @@
   { "name": "Sorrow of Fata Morgana", "unit" : "Daemonissa", "rarity": 6 , "banner" :  ["target", "base"], "img" : "data/img/weapon/six_star_weapon/sorrow_of_fata_morgana.png", "off-pity" :  ["Astraea", "Fudo Myo-o"]},
   { "name": "Orpheus' Lullaby", "unit" : "Pianissimo", "rarity": 6 , "banner" :  ["target", "base"], "img" : "data/img/weapon/six_star_weapon/orpheus_lullaby.png", "off-pity" :  ["Metis", "Cestus"]},
   { "name": "Final Arbiter", "unit" : "Daybreak", "rarity": 6 , "banner" :  ["target", "base"], "img" : "data/img/weapon/six_star_weapon/final_arbiter.png", "off-pity" :  ["Starlight Glare", "Flamewing of Dawn"]},
-  { "name": "Deathless Flame", "unit" : "Geiravor", "rarity": 6 , "banner" :  ["target", "base"], "img" : "data/img/weapon/six_star_weapon/deathless_flame.png", "off-pity" :  ["Renewed Dawn", "Dream Roamer"]}
+  { "name": "Deathless Flame", "unit" : "Geiravor", "rarity": 6 , "banner" :  ["target", "base"], "img" : "data/img/weapon/six_star_weapon/deathless_flame.png", "off-pity" :  ["Renewed Dawn", "Dream Roamer"]},
+  { "name": "Aurora", "unit" : "Crepuscule", "rarity": 6 , "banner" :  ["target", "base"], "img" : "data/img/six_star_weapon/aurora.png", "off-pity" :  ["Sorrow of Fata Morgana", "Dark Falcon"]},
+  { "name": "Osseous Guillotine", "unit" : "Secator", "rarity": 6 , "banner" :  ["target", "base"], "img" : "data/img/six_star_weapon/osseous_guillotine.png", "off-pity" :  ["Alpha-Omega", "Fudo Myo-o"]}
 ]

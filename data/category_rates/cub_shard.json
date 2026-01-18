@@ -27,5 +27,8 @@
   { "name": "Booster Structural Part - Diamaton", "rarity": 5, "img" :  "data/img/cub_shard/shard_diamaton.png" },
   { "name": "Booster Structural Part - Billie", "rarity": 5, "img" :  "data/img/cub_shard/shard_billie.png" },
   { "name": "Booster Structural Part - Snow Waltz", "rarity": 5, "img" :  "data/img/cub_shard/shard_snow_waltz.png" },
-  { "name": "Booster Structural Part - Wrathfang", "rarity": 5, "img" :  "data/img/cub_shard/shard_wrathfang.png" }
+  { "name": "Booster Structural Part - Wrathfang", "rarity": 5, "img" :  "data/img/cub_shard/shard_wrathfang.png" },
+  { "name": "Booster Structural Part - Noctiluca", "rarity": 5, "img" :  "data/img/cub/shard_noctiluca.png" } ,
+  { "name": "Booster Structural Part - Scalefort", "rarity": 5, "img" :  "data/img/cub/shard_scalefort.png" }
+
 ]
