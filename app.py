@@ -8,10 +8,11 @@ from utils import Gacha
 # sidebars
 patch_choice = st.sidebar.selectbox(
     "Patch",
-    ["Sightline Breach"]
+    ["Sightline Breach", "Withering Crown"]
 )
 patch_files = {
-    "Sightline Breach" : "sightline_breach"
+    "Sightline Breach" : "sightline_breach",
+    "Withering Crown" : "withering_crown"
 }
 
 with open(f'data/patches/{patch_files[patch_choice]}.json', "r", encoding="utf-8") as f:

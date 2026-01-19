@@ -36,5 +36,6 @@
   { "name": "Bianca: Crepuscule", "rarity": 6 , "banner" :  ["base"], "img" : "data/img/unit/s_rank_omniframe/crepuscule.png"},
   { "name": "Veronica: Aegis", "rarity": 6 , "banner" :  ["base"], "img" : "data/img/unit/s_rank_omniframe/aegis.png"},
   { "name": "Liv: Limpidity", "rarity": 6 , "banner" :  [""], "img" : "data/img/unit/s_rank_omniframe/limpidity.png"},
-  { "name": "Teddy: Spectre", "rarity": 6 , "banner" :  [""], "img" : "data/img/unit/s_rank_omniframe/spectre.png"}
+  { "name": "Teddy: Spectre", "rarity": 6 , "banner" :  [""], "img" : "data/img/unit/s_rank_omniframe/spectre.png"},
+  { "name": "Rosetta: Arete", "rarity": 6 , "banner" :  [""], "img" : "data/img/unit/s_rank_omniframe/arete.png"}
 ]

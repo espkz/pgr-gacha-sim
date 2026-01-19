@@ -30,6 +30,7 @@
   { "name": "Snow Waltz", "unit": "Pianissimo", "rarity": 6, "banner" : ["base"], "img" : "data/img/cub/snow_waltz.png" },
   { "name": "Wrathfang", "unit": "Geiravor", "rarity": 6, "banner" : ["base"], "img" : "data/img/cub/wrathfang.png" },
   { "name": "Noctiluca", "unit": "Crepuscule", "rarity": 6, "banner" : ["base"], "img" : "data/img/cub/noctiluca.png" },
-  { "name": "Scaled Rampart", "unit": "Aegis", "rarity": 6, "banner" : [""], "img" : "data/img/cub/scaled_rampart.png" },
-  { "name": "Beep-Boop", "unit": "Spectre", "rarity": 6, "banner" : [""], "img" : "data/img/cub/beep_boop.png" }
+  { "name": "Scaled Rampart", "unit": "Aegis", "rarity": 6, "banner" : ["base"], "img" : "data/img/cub/scaled_rampart.png" },
+  { "name": "Beep-Boop", "unit": "Spectre", "rarity": 6, "banner" : ["base"], "img" : "data/img/cub/beep_boop.png" },
+  { "name": "Boling", "unit": "Arete", "rarity": 6, "banner" : [""], "img" : "data/img/cub/boling.png" }
 ]
