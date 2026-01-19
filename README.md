@@ -3,7 +3,8 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 
 ## Current Features
 - Organizable by patches
-  - Teddy: Spectre - Liv: Limpidity
+  - (Current patch) Sightline Breach - Teddy: Spectre
+  - Withering Crown - Rosetta: Arete
 
 ### Banners
 - Themed Banner and Fate Themed Banner
@@ -30,10 +31,8 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 - Pulling too fast will make it bug out (duh don't do that)
 - Gets a little slow because I think that's Streamlit latency (will look for a different place to host)
 - The A-rank check resets in Member Target if you swap patches (probably doesn't really matter but still)
-- Future banners in IP don't give previous unit's shards (CUB and unit)
-  - ~~But also I'm not sure how to do it so it might have to wait until sync~~
 - Target weapon and arrival banner
-  - Calibration exists but it's not visually there (because once it shows up it won't go away like what)
+  - Calibration exists but it's not visually there (because once the message shows up it won't go away like what)
   - No uniqueness for five star and below weapons (~~but uh, do people really want to see what kind of five star they got?~~)
 - Liv's banner will be **separate** — weapon and CUB too
   - Phylo Tree banner operates the same as Themed, 100% rate up but unsure when it returns
@@ -43,4 +42,6 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 
 - [ ] Move it to a more scalable platform
 - [ ] Patch cleanup for post-integrated patches (also a general code cleanup to be honest)
-- [ ] Withering Crown (Arete)
+
+## Log
+2026.01.19 Update for Withering Crown (Arete)
