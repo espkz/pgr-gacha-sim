@@ -100,6 +100,7 @@ class Gacha:
         # apply patch
         s_construct_map = {c["name"]: c for c in self.s_ranks}
         a_construct_map = {c["name"]: c for c in self.a_ranks}
+        weapon_map = {c["name"]: c for c in self.six_star_weapons}
         s_cub_map = {c["name"]: c for c in self.s_cubs}
         for banner in patch_info["banners"]:
             unit_name = banner["unit"]
@@ -107,9 +108,8 @@ class Gacha:
                 unit = s_construct_map.get(unit_name)
                 unit["banner"] = ["debut"]
             elif banner["name"] == "Base Member Target":
-                a_patch_included = patch_info.get("a_rank_patch_included", 0)
-                # A-rank patch debut/if integrated patch
-                if (patch_info["patch_type"] == "A" and banner["rank"] == "A") or (patch_info["patch_type"] == "S" and a_patch_included and banner["rank"] == "A"):
+                # A-rank patch debut
+                if (patch_info["patch_type"] == "A" and banner["rank"] == "A"):
                     unit = a_construct_map.get(unit_name)
                     unit["banner"] = ["debut"]
                 # other (S-rank/A-rank added to banner)
@@ -125,13 +125,8 @@ class Gacha:
                 else:
                     unit["banner"] = ["base"]
             elif "Target Weapon" in banner["name"]:
-                weapon = { "name": banner["weapon"],
-                           "unit" : banner["unit"],
-                           "rarity": 6 ,
-                           "banner" : banner["banner"],
-                           "img" : banner["img"],
-                           "off-pity" : banner["off-pity"]}
-                self.six_star_weapons.append(weapon)
+                weapon = weapon_map.get(banner["weapon"])
+                weapon["banner"] = banner["banner"]
         # update
         self.category_files["A, B-Rank Omniframe"].clear()
         self.category_files["A, B-Rank Omniframe"].extend(self.a_ranks)

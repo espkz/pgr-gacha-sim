@@ -15,24 +15,14 @@
       {
         "name": "Target Weapon",
         "weapon": "Empyrean Wrath",
-        "unit": "Aegis",
-        "banner" : ["target", "base"],
-        "img": "data/img/weapon/six_star_weapon/empyrean_wrath.png",
-        "off-pity": [
-          "Final Arbiter",
-          "Deathless Flame"
-        ]
+        "unit" : "Aegis",
+        "banner" : ["target", "base"]
       },
       {
         "name": "Target Weapon",
         "weapon": "Neon Wayfarer",
-        "unit": "Spectre",
-        "banner" : ["target"],
-        "img": "data/img/weapon/six_star_weapon/neon_wayfarer.png",
-        "off-pity": [
-          "Aurora",
-          "Renewed Dawn"
-        ]
+        "unit" : "Spectre",
+        "banner" : ["target"]
       },
       {
         "name": "CUB Target",

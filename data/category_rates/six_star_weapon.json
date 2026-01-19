@@ -66,6 +66,11 @@
   { "name": "Orpheus' Lullaby", "unit" : "Pianissimo", "rarity": 6 , "banner" :  ["target", "base"], "img" : "data/img/weapon/six_star_weapon/orpheus_lullaby.png", "off-pity" :  ["Metis", "Cestus"]},
   { "name": "Final Arbiter", "unit" : "Daybreak", "rarity": 6 , "banner" :  ["target", "base"], "img" : "data/img/weapon/six_star_weapon/final_arbiter.png", "off-pity" :  ["Starlight Glare", "Flamewing of Dawn"]},
   { "name": "Deathless Flame", "unit" : "Geiravor", "rarity": 6 , "banner" :  ["target", "base"], "img" : "data/img/weapon/six_star_weapon/deathless_flame.png", "off-pity" :  ["Renewed Dawn", "Dream Roamer"]},
-  { "name": "Aurora", "unit" : "Crepuscule", "rarity": 6 , "banner" :  ["target", "base"], "img" : "data/img/six_star_weapon/aurora.png", "off-pity" :  ["Sorrow of Fata Morgana", "Dark Falcon"]},
-  { "name": "Osseous Guillotine", "unit" : "Secator", "rarity": 6 , "banner" :  ["target", "base"], "img" : "data/img/six_star_weapon/osseous_guillotine.png", "off-pity" :  ["Alpha-Omega", "Fudo Myo-o"]}
+  { "name": "Aurora", "unit" : "Crepuscule", "rarity": 6 , "banner" :  ["target", "base"], "img" : "data/img/weapon/six_star_weapon/aurora.png", "off-pity" :  ["Sorrow of Fata Morgana", "Dark Falcon"]},
+  { "name": "Osseous Guillotine", "unit" : "Secator", "rarity": 6 , "banner" :  ["target", "base"], "img" : "data/img/weapon/six_star_weapon/osseous_guillotine.png", "off-pity" :  ["Alpha-Omega", "Fudo Myo-o"]},
+  { "name": "Empyrean Wrath", "unit": "Aegis", "rarity" : 6, "banner" : ["target", "base"], "img": "data/img/weapon/six_star_weapon/empyrean_wrath.png", "off-pity": ["Final Arbiter", "Deathless Flame"]},
+  
+  { "name": "Neon Wayfarer", "unit": "Spectre", "rarity" : 6, "banner" : ["target"], "img": "data/img/weapon/six_star_weapon/neon_wayfarer.png", "off-pity": ["Aurora", "Renewed Dawn"]},
+  { "name": "Phantomsync Halberd", "unit": "Arete", "rarity" : 6, "banner" : ["target"], "img": "data/img/weapon/six_star_weapon/phantomsync_halberd.png", "off-pity": ["Aurora", "Hecate"]}
+
 ]

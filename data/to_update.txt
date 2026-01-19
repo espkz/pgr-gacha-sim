@@ -3,12 +3,13 @@ Template
 
 
 { "name": "Inver-Shard - Spectre", "rarity": 5, "img" :  "data/img/construct_shard/shard_spectre.png" }
+{ "name": "Booster Structural Part - Beep-Boop", "rarity"": 5, "img" :  "data/img/cub_shard/shard_beep_boop.png" }
 
 
 Phylotree
 { "name": "Inver-Shard - Limpidity", "rarity": 5, "img" :  "data/img/construct_shard/shard_limpidity.png" }
-{ "name": "Ripples of the Aloft Sea", "unit" : "Limpidity", "rarity": 6 , "img" : "data/img/six_star_weapon/ripples_of_the_aloft_sea.png", "off-pity" :  ["Orpheus' Lullaby", "Osseous Guillotine"]}
+{ "name": "Ripples of the Aloft Sea", "unit" : "Limpidity", "rarity": 6 , "img" : "data/img/weapon/six_star_weapon/ripples_of_the_aloft_sea.png", "off-pity" :  ["Orpheus' Lullaby", "Osseous Guillotine"]}
 
 { "name": "Levvi", "unit": "Limpidity", "rarity": 6, "banner" : [""], "img" : "data/img/cub/levvi.png" }
-{ "name": "Booster Structural Part - Levvi", "rarity"": 5, "img" :  "data/category_img/cub/shard_levvi.png" }
+{ "name": "Booster Structural Part - Levvi", "rarity"": 5, "img" :  "data/img/cub_shard/shard_levvi.png" }
 
