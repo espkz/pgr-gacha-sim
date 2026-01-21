@@ -57,12 +57,7 @@ Response:
       {
         "name": "Target Weapon",
         "weapon": "Aurora",
-        "unit": "Crepuscule",
-        "img": "data/img/weapon/six_star_weapon/aurora.png",
-        "off-pity": [
-          "Sorrow of Fata Morgana",
-          "Dark Falcon"
-        ]
+        "unit": "Crepuscule"
       },
       {
         "name": "CUB Target",
@@ -126,7 +121,6 @@ Response:
     ]
 }
 ```
-
 
 
 ## POST /pull
