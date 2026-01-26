@@ -71,6 +71,6 @@
   { "name": "Empyrean Wrath", "unit": "Aegis", "rarity" : 6, "banner" : ["target", "base"], "img": "data/img/weapon/six_star_weapon/empyrean_wrath.png", "off-pity": ["Final Arbiter", "Deathless Flame"]},
   
   { "name": "Neon Wayfarer", "unit": "Spectre", "rarity" : 6, "banner" : ["target"], "img": "data/img/weapon/six_star_weapon/neon_wayfarer.png", "off-pity": ["Aurora", "Renewed Dawn"]},
-  { "name": "Phantomsync Halberd", "unit": "Arete", "rarity" : 6, "banner" : ["target"], "img": "data/img/weapon/six_star_weapon/phantomsync_halberd.png", "off-pity": ["Aurora", "Hecate"]}
+  { "name": "Mirage Halberd: Amalga", "unit": "Arete", "rarity" : 6, "banner" : ["target"], "img": "data/img/weapon/six_star_weapon/mirage_halberd_amalga.png", "off-pity": ["Aurora", "Hecate"]}
 
 ]

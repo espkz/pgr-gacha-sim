@@ -20,7 +20,7 @@
       },
       {
         "name": "Target Weapon",
-        "weapon": "Phantomsync Halberd",
+        "weapon": "Mirage Halberd: Amalga",
         "unit": "Arete",
         "banner" : ["target"]
       },
@@ -30,7 +30,7 @@
       },
       {
         "name": "CUB Target",
-        "unit" : "Boling"
+        "unit" : "Buzzling"
       }
     ]
 }
