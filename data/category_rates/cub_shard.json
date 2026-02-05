@@ -29,6 +29,8 @@
   { "name": "Booster Structural Part - Snow Waltz", "rarity": 5, "img" :  "data/img/cub_shard/shard_snow_waltz.png" },
   { "name": "Booster Structural Part - Wrathfang", "rarity": 5, "img" :  "data/img/cub_shard/shard_wrathfang.png" },
   { "name": "Booster Structural Part - Noctiluca", "rarity": 5, "img" :  "data/img/cub_shard/shard_noctiluca.png" } ,
-  { "name": "Booster Structural Part - Scaled Rampart", "rarity": 5, "img" :  "data/img/cub_shard/shard_scaled_rampart.png" }
+  { "name": "Booster Structural Part - Scaled Rampart", "rarity": 5, "img" :  "data/img/cub_shard/shard_scaled_rampart.png" },
+  { "name": "Booster Structural Part - Beep-Boop", "rarity": 5, "img" :  "data/img/cub_shard/shard_beep_boop.png" },
+  { "name": "Booster Structural Part - Buzzling", "rarity": 5, "img" :  "data/img/cub_shard/shard_buzzling.png" }
 
 ]

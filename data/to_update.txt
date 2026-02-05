@@ -1,9 +1,9 @@
 Template
 { "name": "Aurora", "unit" : "Crepuscule", "rarity": 6 , "img" : "data/img/six_star_weapon/aurora.png", "off-pity" :  ["Aurora", "Hecate"]}
 
-
-{ "name": "Inver-Shard - Spectre", "rarity": 5, "img" :  "data/img/construct_shard/shard_spectre.png" }
-{ "name": "Booster Structural Part - Beep-Boop", "rarity"": 5, "img" :  "data/img/cub_shard/shard_beep_boop.png" }
+(already in, but probably should figure out shard stuff for patch)
+{ "name": "Inver-Shard - Arete", "rarity": 5, "img" :  "data/img/construct_shard/shard_arete.png" }
+{ "name": "Booster Structural Part - Buzzling", "rarity": 5, "img" :  "data/img/cub_shard/shard_buzzling.png" }
 
 
 Phylotree

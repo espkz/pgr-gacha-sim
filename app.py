@@ -8,10 +8,9 @@ from utils import Gacha
 # sidebars
 patch_choice = st.sidebar.selectbox(
     "Patch",
-    ["Sightline Breach", "Withering Crown"]
+    ["Withering Crown"]
 )
 patch_files = {
-    "Sightline Breach" : "sightline_breach",
     "Withering Crown" : "withering_crown"
 }
 

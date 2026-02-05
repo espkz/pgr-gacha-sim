@@ -63,6 +63,8 @@
   { "name": "Inver-Shard - Pianissimo", "rarity": 5, "img" :  "data/img/construct_shard/shard_pianissimo.png" },
   { "name": "Inver-Shard - Geiravor", "rarity": 5, "img" :  "data/img/construct_shard/shard_geiravor.png" },
   { "name": "Inver-Shard - Crepuscule", "rarity": 5, "img" :  "data/img/construct_shard/shard_crepuscule.png" },
-  { "name": "Inver-Shard - Aegis", "rarity": 4, "img" :  "data/img/construct_shard/shard_aegis.png" }
+  { "name": "Inver-Shard - Aegis", "rarity": 4, "img" :  "data/img/construct_shard/shard_aegis.png" },
+  { "name": "Inver-Shard - Spectre", "rarity": 5, "img" :  "data/img/construct_shard/shard_spectre.png" },
+  { "name": "Inver-Shard - Arete", "rarity": 5, "img" :  "data/img/construct_shard/shard_arete.png" }
 
 ]

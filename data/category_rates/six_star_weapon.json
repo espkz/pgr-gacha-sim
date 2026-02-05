@@ -69,8 +69,8 @@
   { "name": "Aurora", "unit" : "Crepuscule", "rarity": 6 , "banner" :  ["target", "base"], "img" : "data/img/weapon/six_star_weapon/aurora.png", "off-pity" :  ["Sorrow of Fata Morgana", "Dark Falcon"]},
   { "name": "Osseous Guillotine", "unit" : "Secator", "rarity": 6 , "banner" :  ["target", "base"], "img" : "data/img/weapon/six_star_weapon/osseous_guillotine.png", "off-pity" :  ["Alpha-Omega", "Fudo Myo-o"]},
   { "name": "Empyrean Wrath", "unit": "Aegis", "rarity" : 6, "banner" : ["target", "base"], "img": "data/img/weapon/six_star_weapon/empyrean_wrath.png", "off-pity": ["Final Arbiter", "Deathless Flame"]},
-  
   { "name": "Neon Wayfarer", "unit": "Spectre", "rarity" : 6, "banner" : ["target"], "img": "data/img/weapon/six_star_weapon/neon_wayfarer.png", "off-pity": ["Aurora", "Renewed Dawn"]},
-  { "name": "Mirage Halberd: Amalga", "unit": "Arete", "rarity" : 6, "banner" : ["target"], "img": "data/img/weapon/six_star_weapon/mirage_halberd_amalga.png", "off-pity": ["Aurora", "Hecate"]}
+
+  { "name": "Mirage Halberd: Amalga", "unit": "Arete", "rarity" : 6, "banner" : [""], "img": "data/img/weapon/six_star_weapon/mirage_halberd_amalga.png", "off-pity": ["Final Arbiter", "Empyrean Wrath"]}
 
 ]

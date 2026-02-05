@@ -18,11 +18,9 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 
 ## Sources
 - Huaxu
-  - [Frame images](https://assets.huaxu.app/browse/cn/image/role/?layout=grid)
-  - Icons
-    - [Shards, currency, weapons](https://assets.huaxu.app/browse/glb/assets/product/texture/image/icontools/?layout=grid#)
-    - [Character](https://assets.huaxu.app/browse/glb/assets/product/texture/image/role/?layout=grid#)
-    - [CUBs](https://assets.huaxu.app/browse/glb/assets/product/texture/image/rolepartner/?layout=grid)
+  - [Shards, currency, weapons](https://assets.huaxu.app/browse/glb/assets/product/texture/image/icontools/?layout=grid#)
+  - [Character](https://assets.huaxu.app/browse/glb/assets/product/texture/image/role/?layout=grid#)
+  - [CUBs](https://assets.huaxu.app/browse/glb/assets/product/texture/image/rolepartner/?layout=grid)
 - [Gray Ravens](https://grayravens.com/wiki/GRAY_RAVENS)
 
 ## Current Issues
@@ -37,6 +35,7 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 - Liv's banner will be **separate** — weapon and CUB too
   - Phylo Tree banner operates the same as Themed, 100% rate up but unsure when it returns
   - Weapon and CUB targetable if the unit debuts/reruns
+- Debut banner gives shards (sim doesn't account for this)
 
 ## TODO
 
@@ -44,4 +43,5 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 - [ ] Patch cleanup for post-integrated patches (also a general code cleanup to be honest)
 
 ## Log
-2026.01.19 Update for Withering Crown (Arete)
+2026.01.19 Update for upcoming Withering Crown (Arete)
+2026.02.04 Withering Crown patch
