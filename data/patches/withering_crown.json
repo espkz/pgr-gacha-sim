@@ -1,6 +1,7 @@
 {
     "patch_name": "Withering Crown",
     "patch_type" : "S",
+    "phylotree" : false,
     "img": "data/img/patch_banners/withering_crown.png",
     "start_date" : "2026/02/03, 05:00 UTC",
     "banners": [
@@ -31,6 +32,14 @@
       {
         "name": "CUB Target",
         "unit" : "Buzzling"
+      },
+      {
+        "name" : "Construct Shard",
+        "unit" : "Inver-Shard - Arete"
+      },
+      {
+        "name" : "CUB Shard",
+        "unit" : "Booster Structural Part - Buzzling"
       }
     ]
 }

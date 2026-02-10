@@ -38,12 +38,14 @@ class Gacha:
         self.patch_json = f'data/patches/{patch}.json'
 
         # load frames and cubs for updating
-        self.s_ranks = load_json("data/category_rates/s_rank_omniframe.json")
+        self.s_ranks = [] # load_json("data/category_rates/s_rank_omniframe.json")
+        self.construct_shards = [] # load_json("data/category_rates/construct_shard.json")
         self.uniframes = load_json("data/category_rates/uniframe.json")
-        self.a_ranks = load_json("data/category_rates/a_b_rank_omniframe.json")
-        self.six_star_weapons = load_json("data/category_rates/six_star_weapon.json")
+        self.a_ranks = [] # load_json("data/category_rates/a_b_rank_omniframe.json")
+        self.six_star_weapons = [] # load_json("data/category_rates/six_star_weapon.json")
         self.five_star_weapons = load_json("data/category_rates/five_star_weapon.json")
-        self.s_cubs = [i for i in load_json("data/category_rates/cub.json") if i.get("rarity") == 6]
+        self.s_cubs = [] # [i for i in load_json("data/category_rates/cub.json") if i.get("rarity") == 6]
+        self.cub_shards = [] # load_json("data/category_rates/cub_shard.json")
         self.a_cubs = [i for i in load_json("data/category_rates/cub.json") if i.get("rarity") == 5]
 
         # update banner type and patch if applicable
@@ -56,7 +58,7 @@ class Gacha:
         self.category_files = {
             "S-Rank Omniframe": self.s_ranks,
             "A, B-Rank Omniframe": self.a_ranks,
-            "Construct Shard": "data/category_rates/construct_shard.json",
+            "Construct Shard": self.construct_shards,
             "4-star Equipment": "data/category_rates/four_star_equipment.json",
             "Overclock Material": "data/category_rates/overclock_material.json",
             "EXP Material": "data/category_rates/exp_material.json",
@@ -69,7 +71,7 @@ class Gacha:
             "CUB EXP Material" : "data/category_rates/cub_exp_material.json",
             "CUB Overclock Material" : "data/category_rates/cub_overclock_material.json",
             "Support Skill Component": "data/category_rates/support_skill_component.json",
-            "CUB Shard" : "data/category_rates/cub_shard.json",
+            "CUB Shard" : self.cub_shards,
 
             "6-star Weapon" : self.six_star_weapons,
             "5-star Weapon" : self.five_star_weapons,
@@ -93,8 +95,10 @@ class Gacha:
         patch_info = load_json(self.patch_json)
         # reset
         self.s_ranks = load_json("data/category_rates/s_rank_omniframe.json")
+        self.construct_shards = load_json("data/category_rates/construct_shard.json")
         self.a_ranks = load_json("data/category_rates/a_b_rank_omniframe.json")
         self.s_cubs = [i for i in load_json("data/category_rates/cub.json") if i.get("rarity") == 6]
+        self.cub_shards = load_json("data/category_rates/cub_shard.json")
         self.six_star_weapons = load_json("data/category_rates/six_star_weapon.json")
 
         # apply patch
@@ -102,6 +106,8 @@ class Gacha:
         a_construct_map = {c["name"]: c for c in self.a_ranks}
         weapon_map = {c["name"]: c for c in self.six_star_weapons}
         s_cub_map = {c["name"]: c for c in self.s_cubs}
+        construct_shard_map = {c["name"]: c for c in self.construct_shards}
+        cub_shard_map = {c["name"]: c for c in self.cub_shards}
         for banner in patch_info["banners"]:
             unit_name = banner["unit"]
             if banner["name"] in ["Themed Banner", "Fate Themed Banner"]:
@@ -127,6 +133,22 @@ class Gacha:
             elif "Target Weapon" in banner["name"]:
                 weapon = weapon_map.get(banner["weapon"])
                 weapon["banner"] = banner["banner"]
+            elif "Construct Shard" in banner["name"]:
+                unit = construct_shard_map.get(unit_name)
+                name = unit_name.split()[-1].strip()
+                signature_unit = next(i for i in self.s_ranks if name in i["name"])
+                if "debut" in signature_unit["banner"]:
+                    unit["banner"] = ["debut"]
+                else:
+                    unit["banner"] = ["base"]
+            elif "CUB Shard" in banner["name"]:
+                unit = cub_shard_map.get(unit_name)
+                name = unit_name.split()[-1].strip()
+                signature_unit = next(i for i in self.s_cubs if name in i["name"])
+                if "debut" in signature_unit["banner"]:
+                    unit["banner"] = ["debut"]
+                else:
+                    unit["banner"] = ["base"]
         # update
         self.category_files["A, B-Rank Omniframe"].clear()
         self.category_files["A, B-Rank Omniframe"].extend(self.a_ranks)
@@ -136,6 +158,12 @@ class Gacha:
         self.category_files["S-Rank CUB"].extend(self.s_cubs)
         self.category_files["6-star Weapon"].clear()
         self.category_files["6-star Weapon"].extend(self.six_star_weapons)
+        self.category_files["Construct Shard"].clear()
+        self.category_files["Construct Shard"].extend(self.construct_shards)
+        self.category_files["CUB Shard"].clear()
+        self.category_files["CUB Shard"].extend(self.cub_shards)
+
+
     # update target
     def change_target(self, rarity = 5, name = ""):
         self.targets[rarity] = name
@@ -220,12 +248,25 @@ class Gacha:
             return self._get_five_star(self.targets["type"])
         elif chosen_category_rarity == 6:
             return self._get_six_star(self.targets["type"])
-        items = load_json(self.category_files[chosen_category_name])
-        if chosen_category_name == "4-star Equipment":
-            if "uniframe" in self.gacha_banner:
-                items = [i for i in items if i.get("banner") == "uniframe"]
-            else:
-                items = [i for i in items if i.get("banner") == "base"]
+        items = self.category_files[chosen_category_name]
+        # theory - construct shards are also added to the base banner two patches later
+        if chosen_category_name == "Construct Shard":
+            items = [i for i in items if "base" in i["banner"]]
+            if "themed" in self.gacha_banner:
+                # add debut shards into banner
+                items += [i for i in items if "debut" in i["banner"]]
+        # theory - so do cubs
+        elif chosen_category_name == "CUB Shard":
+            items = [i for i in items if "base" in i["banner"]]
+            # add debut shards into banner
+            items += [i for i in items if "debut" in i["banner"]]
+        else:
+            items = load_json(self.category_files[chosen_category_name])
+            if chosen_category_name == "4-star Equipment":
+                if "uniframe" in self.gacha_banner:
+                    items = [i for i in items if i.get("banner") == "uniframe"]
+                else:
+                    items = [i for i in items if i.get("banner") == "base"]
         return choice(items)
 
     def _get_five_star_or_higher(self):

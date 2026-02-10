@@ -1,15 +1,5 @@
 Template
-{ "name": "Aurora", "unit" : "Crepuscule", "rarity": 6 , "img" : "data/img/six_star_weapon/aurora.png", "off-pity" :  ["Aurora", "Hecate"]}
-
-(already in, but probably should figure out shard stuff for patch)
-{ "name": "Inver-Shard - Arete", "rarity": 5, "img" :  "data/img/construct_shard/shard_arete.png" }
-{ "name": "Booster Structural Part - Buzzling", "rarity": 5, "img" :  "data/img/cub_shard/shard_buzzling.png" }
-
-
-Phylotree
-{ "name": "Inver-Shard - Limpidity", "rarity": 5, "img" :  "data/img/construct_shard/shard_limpidity.png" }
-{ "name": "Ripples of the Aloft Sea", "unit" : "Limpidity", "rarity": 6 , "img" : "data/img/weapon/six_star_weapon/ripples_of_the_aloft_sea.png", "off-pity" :  ["Orpheus' Lullaby", "Osseous Guillotine"]}
-
-{ "name": "Levvi", "unit": "Limpidity", "rarity": 6, "banner" : [""], "img" : "data/img/cub/levvi.png" }
-{ "name": "Booster Structural Part - Levvi", "rarity"": 5, "img" :  "data/img/cub_shard/shard_levvi.png" }
-
+{ "name": "Bianca: Crepuscule", "rarity": 6 , "banner" :  ["base"], "img" : "data/img/unit/s_rank_omniframe/crepuscule.png"},
+{ "name": "Aurora", "unit" : "Crepuscule", "rarity": 6 , "banner" :  ["target", "base"], "img" : "data/img/weapon/six_star_weapon/aurora.png", "off-pity" :  ["Sorrow of Fata Morgana", "Dark Falcon"]},
+{ "name": "Inver-Shard - Crepuscule", "rarity": 5, "banner" : ["base"], "img" :  "data/img/construct_shard/shard_crepuscule.png" },
+{ "name": "Booster Structural Part - Noctiluca", "rarity": 5, "banner": ["base"], "img" :  "data/img/cub_shard/shard_noctiluca.png" } ,
