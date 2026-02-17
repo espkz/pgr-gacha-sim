@@ -3,8 +3,7 @@ I mostly made this because I saw the Uma Musume one and got jealous lol
 
 ## Current Features
 - Organizable by patches
-  - (Current patch) Sightline Breach - Teddy: Spectre
-  - Withering Crown - Rosetta: Arete
+  - (Current patch) Withering Crown - Rosetta: Arete
 
 ### Banners
 - Themed Banner and Fate Themed Banner
