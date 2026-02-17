@@ -1,8 +1,8 @@
 [
-  { "name": "Alice", "rarity": 4 , "banner" : "base", "img" : "data/img/four_star_equipment/alice.png"},
-  { "name": "Archimedes", "rarity": 4 , "banner" : "base", "img" : "data/img/four_star_equipment/archimedes.png"},
-  { "name": "Cunningham", "rarity": 4 , "banner" : "base", "img" : "data/img/four_star_equipment/cunningham.png"},
-  { "name": "Edison", "rarity": 4 , "banner" : "base", "img" : "data/img/four_star_equipment/edison.png"},
+  { "name": "Alice", "rarity": 4 , "banner" : ["base"], "img" : "data/img/four_star_equipment/alice.png"},
+  { "name": "Archimedes", "rarity": 4 , "banner" : ["base"], "img" : "data/img/four_star_equipment/archimedes.png"},
+  { "name": "Cunningham", "rarity": 4 , "banner" : ["base"], "img" : "data/img/four_star_equipment/cunningham.png"},
+  { "name": "Edison", "rarity": 4 , "banner" : ["base"], "img" : "data/img/four_star_equipment/edison.png"},
 
-  { "name": "Nimitz", "rarity": 4 , "banner" : "uniframe", "img" : "data/img/four_star_equipment/nimitz.png"}
+  { "name": "Nimitz", "rarity": 4 , "banner" : ["uniframe"], "img" : "data/img/four_star_equipment/nimitz.png"}
 ]
