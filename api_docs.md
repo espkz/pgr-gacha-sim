@@ -1,7 +1,7 @@
 # PGR Gacha API Documentation
 
 ## GET /patches
-- Returns all available patches.
+- Returns all current and future patches.
 
 Response:
 ```json
@@ -35,16 +35,18 @@ Response:
 ```
 
 
-## GET /patch
+## GET /patches/{patch_id}
 - Returns information of selected patch.
+- Use time in ISO format for hopefully easier conversion
 
 Response:
 ```json
 {
-    "patch_name": "Through the Tide Home",
-    "patch_type" : "S",
+    "id" : "through_the_tide_home",
+    "name": "Through the Tide Home",
+    "type" : "S",
     "img": "data/img/patch_banners/through_the_tide_home.png",
-    "start_date" : "2025/07/03, 05:00 CST",
+    "start_date" : "2025-07-03T05:00:00Z",
     "banners": [
       {
         "name": "Themed Banner",
@@ -72,16 +74,17 @@ Response:
 }
 ```
 
-## GET /banner
+## GET /banners/{banner_id}
 - Returns information of selected banner.
 
 Response:
 ```json
 {
-    "title": "Themed Banner",
+    "id" : "themed_banner",
+    "name": "Themed Banner",
     "pity" : 60,
-    "has_five_star_pity" : 1,
-    "has_calibration" : 0,
+    "has_five_star_pity" : true,
+    "has_calibration" : false,
     "rates": [
       {
         "name": "S-Rank Omniframe",
@@ -124,18 +127,20 @@ Response:
 
 
 ## POST /pull
-- Perform a gacha pull.
+- Perform n number of gacha pulls.
 
 Request:
+```json
 {
-  "patch_id" : "through_the_tide_home"
-  "banner_id": "fate_themed_banner",
+  "patch_id" : "through_the_tide_home",
+  "banner_id" : "fate_themed_banner",
   "times": 1
 }
+```
 Response:
 ```json
 {
-  "banner_id": "fate_themed_banner",
+  "banner": "fate_themed_banner",
   "results": [
       { "name": "Bianca: Crepuscule", "rarity": 6 , "banner" :  ["debut"], "img" : "data/img/unit/s_rank_omniframe/crepuscule.png"}
   ]
