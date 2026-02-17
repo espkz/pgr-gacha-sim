@@ -264,9 +264,9 @@ class Gacha:
             items = load_json(self.category_files[chosen_category_name])
             if chosen_category_name == "4-star Equipment":
                 if "uniframe" in self.gacha_banner:
-                    items = [i for i in items if i.get("banner") == "uniframe"]
+                    items = [i for i in items if "uniframe" in i["banner"]]
                 else:
-                    items = [i for i in items if i.get("banner") == "base"]
+                    items = [i for i in items if "base" in i["banner"]]
         return choice(items)
 
     def _get_five_star_or_higher(self):
