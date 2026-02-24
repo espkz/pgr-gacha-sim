@@ -1,5 +1,6 @@
 from random import choices, choice, random
 import json
+from typing import List, Dict
 
 def load_json(file_path):
     with open(file_path, "r") as f:
@@ -22,70 +23,25 @@ def check_five_star_pity(file_path):
 #         data = json.load(f)
 #     return data["has_calibration"]
 
+
 class Gacha:
-    def __init__(self, gacha_banner='standard_themed_banner', patch = 'glb_through_the_tide_home_integrated'):
-        self.pity_count = 0
-        self.five_star_pity_count = 0  # five-star pity is 10 for all base banners
-        self.acquire_construct = False
-        self.bc = 0
-        self.pulls = 0
-        self.spoils = []
-
-        self.gacha_banner = gacha_banner
-        self.gacha_banner_json = f'data/banners/{gacha_banner}.json'
-
+    def __init__(self, patch : str, gacha_banner : str, targets : List[Dict]):
         self.patch = patch
         self.patch_json = f'data/patches/{patch}.json'
 
-        # load frames and cubs for updating
-        self.s_ranks = [] # load_json("data/category_rates/s_rank_omniframe.json")
-        self.construct_shards = [] # load_json("data/category_rates/construct_shard.json")
-        self.uniframes = load_json("data/category_rates/uniframe.json")
-        self.a_ranks = [] # load_json("data/category_rates/a_b_rank_omniframe.json")
-        self.six_star_weapons = [] # load_json("data/category_rates/six_star_weapon.json")
-        self.five_star_weapons = load_json("data/category_rates/five_star_weapon.json")
-        self.s_cubs = [] # [i for i in load_json("data/category_rates/cub.json") if i.get("rarity") == 6]
-        self.cub_shards = [] # load_json("data/category_rates/cub_shard.json")
-        self.a_cubs = [i for i in load_json("data/category_rates/cub.json") if i.get("rarity") == 5]
-
-        # update banner type and patch if applicable
-        self.category_rates, self.pity = load_banner(self.gacha_banner_json)
-        self.has_five_star_pity = True if check_five_star_pity(self.gacha_banner_json) else False
-        self.calibration = False # if check_calibration(self.gacha_banner_json) else None
-        self.has_five_star_target = False
-        self.has_six_star_target = False
-
-        self.category_files = {
-            "S-Rank Omniframe": self.s_ranks,
-            "A, B-Rank Omniframe": self.a_ranks,
-            "Construct Shard": self.construct_shards,
-            "4-star Equipment": "data/category_rates/four_star_equipment.json",
-            "Overclock Material": "data/category_rates/overclock_material.json",
-            "EXP Material": "data/category_rates/exp_material.json",
-            "Cog Box": "data/category_rates/cog_box.json",
-
-            "S-Rank Uniframe" : self.uniframes,
-
-            "S-Rank CUB" : self.s_cubs,
-            "A-Rank CUB" : self.a_cubs,
-            "CUB EXP Material" : "data/category_rates/cub_exp_material.json",
-            "CUB Overclock Material" : "data/category_rates/cub_overclock_material.json",
-            "Support Skill Component": "data/category_rates/support_skill_component.json",
-            "CUB Shard" : self.cub_shards,
-
-            "6-star Weapon" : self.six_star_weapons,
-            "5-star Weapon" : self.five_star_weapons,
-            "4-star Weapon" : "data/category_rates/four_star_weapon.json",
-            "3-star Weapon" : "data/category_rates/three_star_weapon.json"
-
+        to_update = {
+            "debut" : ["standard_themed_banner", "fate_themed_banner", "standard_phylotree_banner", "fate_phylotree_banner"],
+            "arrival" : ["arrival_banner", "fate_arrival_banner"],
+            "base" : ["member_target_banner"],
+            "weapon" : ["target_weapon", "weapon"],
+            "cub" : ["cub_target_banner"],
+            "uniframe" : ["target_uniframe"]
         }
 
-        self.targets = {
-            "type" : "",
-            5 : "",
-            6 : "",
-            "off_pity" : []
-        }
+        # update pool based on patch
+        patch_info = load_json(self.patch_json)
+        # debut, update debut S-rank and any previous A-ranks
+
 
     def update_patch(self, patch):
         # new patch information
@@ -264,9 +220,9 @@ class Gacha:
             items = load_json(self.category_files[chosen_category_name])
             if chosen_category_name == "4-star Equipment":
                 if "uniframe" in self.gacha_banner:
-                    items = [i for i in items if i.get("banner") == "uniframe"]
+                    items = [i for i in items if "uniframe" in i["banner"]]
                 else:
-                    items = [i for i in items if i.get("banner") == "base"]
+                    items = [i for i in items if "base" in i["banner"]]
         return choice(items)
 
     def _get_five_star_or_higher(self):

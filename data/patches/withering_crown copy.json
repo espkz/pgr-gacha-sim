@@ -1,0 +1,42 @@
+{
+    "patch_name": "Withering Crown",
+    "patch_type" : "S",
+    "phylotree" : false,
+    "img": "data/img/patch_banners/withering_crown.png",
+    "start_date" : "2026/02/03, 05:00 UTC",
+    "banners": [
+      {
+        "key": "debut",
+        "name" : "Rosetta: Arete",
+        "type" : "S"
+      },
+      {
+        "key": "weapon",
+        "name": "Empyrean Wrath",
+        "banner" : ["target", "base"]
+      },
+      {
+        "key": "weapon",
+        "name": "Mirage Halberd: Amalga",
+        "banner" : ["target"]
+      },
+      {
+        "key": "cub",
+        "name" : "Beep-Boop",
+        "banner" : ["base"]
+      },
+      {
+        "name": "cub",
+        "unit" : "Buzzling",
+        "banner" : ["debut"]
+      },
+      {
+        "name" : "construct_shard",
+        "unit" : "Inver-Shard - Arete"
+      },
+      {
+        "name" : "cub_shard",
+        "unit" : "Booster Structural Part - Buzzling"
+      }
+    ]
+}

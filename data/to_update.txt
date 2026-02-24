@@ -1,5 +1,5 @@
 Template
 { "name": "Bianca: Crepuscule", "rarity": 6 , "banner" :  ["base"], "img" : "data/img/unit/s_rank_omniframe/crepuscule.png"},
-{ "name": "Aurora", "unit" : "Crepuscule", "rarity": 6 , "banner" :  ["target", "base"], "img" : "data/img/weapon/six_star_weapon/aurora.png", "off-pity" :  ["Sorrow of Fata Morgana", "Dark Falcon"]},
+{ "name": "Aurora", "unit" : "Crepuscule", "rarity": 6 , "banner" :  ["target", "base"], "img" : "data/img/weapon/six_star_weapon/aurora.png", "offpity" :  ["Sorrow of Fata Morgana", "Dark Falcon"]},
 { "name": "Inver-Shard - Crepuscule", "rarity": 5, "banner" : ["base"], "img" :  "data/img/construct_shard/shard_crepuscule.png" },
 { "name": "Booster Structural Part - Noctiluca", "rarity": 5, "banner": ["base"], "img" :  "data/img/cub_shard/shard_noctiluca.png" } ,

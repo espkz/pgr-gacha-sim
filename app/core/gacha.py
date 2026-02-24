@@ -358,7 +358,7 @@ class Gacha:
                     return target_item
                 else:
                     self.calibration = True
-                    non_target_items = [i for i in s_ranks if i["name"] in target_item["off-pity"]]
+                    non_target_items = [i for i in s_ranks if i["name"] in target_item["offpity"]]
                     return choice(non_target_items)
             # base banner
             s_ranks = [i for i in items if "base" in i["banner"]]

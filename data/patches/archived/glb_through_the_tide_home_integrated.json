@@ -27,7 +27,7 @@
         "unit": "Crepuscule",
         "banner" : ["target"],
         "img": "data/img/weapon/six_star_weapon/aurora.png",
-        "off-pity": [
+        "offpity": [
           "Sorrow of Fata Morgana",
           "Dark Falcon"
         ]
@@ -38,7 +38,7 @@
         "unit": "Secator",
         "banner" : ["target"],
         "img": "data/img/weapon/six_star_weapon/osseous_guillotine.png",
-        "off-pity": [
+        "offpity": [
           "Alpha-Omega",
           "Fudo Myo-o"
         ]
@@ -49,7 +49,7 @@
         "unit": "Aegis",
         "banner" : ["target"],
         "img": "data/img/weapon/six_star_weapon/empyrean_wrath.png",
-        "off-pity": [
+        "offpity": [
           "Final Arbiter",
           "Deathless Flame"
         ]

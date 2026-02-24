@@ -10,8 +10,11 @@ class PullRequest(BaseModel):
 class PullResult(BaseModel):
     name: str
     rarity: int
+    rank: Optional[str] = None
+    unit: Optional[str] = None
     banner: Optional[List[str]] = None
     img: str
+    offpity: Optional[List[str]] = None
 
 
 class PullResponse(BaseModel):
